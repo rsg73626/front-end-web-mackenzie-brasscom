@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    --var-bgcolor: lightblue;
+    font-family: Arial;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: lightgray;
+}
+
+header {
+    width: calc(100% - 34px);
+    height: calc(25% - 34px);
+    margin: 5px;
+    padding: 10px;
+    border: black solid 2px;
+    border-radius: 5px;
+    background: var(--var-bgcolor);
+}
+
+aside {
+    float: left;
+    width: calc(25% - 34px);
+    height: calc(55% - 34px);
+    margin: 5px;
+    padding: 10px;
+    border: black solid 2px;
+    border-radius: 5px;
+    background: var(--var-bgcolor);
+}
+
+main {
+    float: right;
+    width: calc(75% - 34px);
+    height: calc(55% - 34px);
+    margin: 5px;
+    padding: 10px;
+    border: black solid 2px;
+    border-radius: 5px;
+    background: var(--var-bgcolor);
+}
+
+footer {
+    width: calc(100% - 34px);
+    height: calc(20% - 34px);
+    margin: 5px;
+    padding: 10px;
+    border: black solid 2px;
+    border-radius: 5px;
+    background: var(--var-bgcolor);
+    float: right;
+}
+
+.header {
+    width: calc(100% - 34px);
+    height: calc(25% - 34px);
+    margin: 5px;
+    padding: 10px;
+    border: black solid 2px;
+    border-radius: 5px;
+    background: var(--var-bgcolor);
+}
+
+.aside {
+    float: left;
+    width: calc(25% - 34px);
+    height: calc(55% - 34px);
+    margin: 5px;
+    padding: 10px;
+    border: black solid 2px;
+    border-radius: 5px;
+    background: var(--var-bgcolor);
+}
+
+.main {
+    float: right;
+    width: calc(75% - 34px);
+    height: calc(55% - 34px);
+    margin: 5px;
+    padding: 10px;
+    border: black solid 2px;
+    border-radius: 5px;
+    background: var(--var-bgcolor);
+}
+
+.footer {
+    width: calc(100% - 34px);
+    height: calc(20% - 34px);
+    margin: 5px;
+    padding: 10px;
+    border: black solid 2px;
+    border-radius: 5px;
+    background: var(--var-bgcolor);
+    float: right;
+}
