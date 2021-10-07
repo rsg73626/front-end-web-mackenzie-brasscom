@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8">
+		<title>Tag IMG</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li><a href="index.html">Início</a></li>
+					<li><a href="tagh.html">Tags de título</a></li>
+					<li><a href="tagp.html">Tag de parágrafo</a></li>
+					<li><a href="tagimg.html">Tag de imagem</a></li>
+					<li><a href="taga.html">Tag de link</a></li>
+					<li><a href="tagli.html">Tags de lista</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<h1>Tag de imagem</h1>
+
+			<p>A tag de imagem, &lt;img&gt;, é utilizada para inserir imagens de uma página web. Ela possui algumas configurações importantes que devem ser feitas.</p>
+			<p>Toda tag &lt;img&gt precisa de um valor para o atributo src, que deve ser a URL com o caminho da imagem a ser exibida. Esse caminho pode ser uma URL de uma imagem na internet, ou o caminho de uma imagem que está em alguma pasta do mesmo computador na qual a página está salva. Por organização o ideal é que a imagem a ser usada esteja na mesma pasta da página web (arquivo .html), ou em uma subpasta que agrupa as imagens do site (por exemplo, "imagens"). </p>
+			<p>Também é importante definir um valor para o atributo alt (texto alternativo), que será exibido quando não for possível exibir a imagem. Também é importante para a acessibilidade, pois quem não enxerga consegue ter acesso ao mesmo conteúdo da imagem. Caso a imagem seja apenas decorativa, ou seja, para implementar o design da página, pode-ser usar um valor vazio ("").</p>
+			<p>Outro atributo que pode ser interessante usar é o title, que definir um texto com algum conteúdo sobre a imagem que será exibido quando usuário passar o cursor em cima da imagem.</p>
+			<p>É possível definir a largura e a altura da imagem diretamente pelo HTML (através dos atributos width e height). Mas o ideal é usar o atributo style e definir o tamanho da imagem com as propriedades do CSS.</p>
+			<p>A seguir, alguns exemplos de uso da tag &lt;img&gt;:</p>
+
+			<figure>
+				<img src="https://t.ctcdn.com.br/8FplhVkDQdAatiUcehCimgkGJlI=/512x288/smart/i257652.jpeg" alt="exemplo" title="Exemplo" style="width:150px;height:110px;">
+				<figcaption>Exemplo de uso da tag img com valor do src apontando para uma URL da internet.</figcaption>
+			</figure>
+			
+			<figure>
+				<img src="exemploimg.jpeg" alt="exemplo" title="Exemplo" style="width:150px;height:110px;">
+				<figcaption>Exemplo de uso da tag img com valor do src apontando para uma imagem local (na mesma pasta onde está o arquivo .html).</figcaption>
+			</figure>
+
+			<figure>
+				<img src="exempoimg.jpeg" alt="Texto alternativo (usado quando imagem não carregar)" title="Exemplo do atributo alt funcionando." style="width:300px;height:220px;" style="width:150px;height:110px;">
+				<figcaption>Exemplo do atributo alt funcionando.</figcaption>
+			</figure>
+
+		</main>
+	</body>
+</html>
