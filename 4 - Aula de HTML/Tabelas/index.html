@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tabelas</title>
+        <!-- <style>
+            table, th, td {
+               border: 1px solid white;
+               border-collapse: collapse;
+               background-color: lightgreen;
+            }
+        </style> -->
+    </head>
+    <body>
+        <h1>Tabelas</h1>
+
+        <h2>Tabela com layout horizontal</h2>
+        <!--Define uma tabela-->
+        <table style="width: 500px; height: 100px;">
+            <!--Define uma legenda que vai aparecer em cima da tabela.-->
+            <caption>Tabela de empresas</caption>
+            <!--Define uma linha na tabela-->
+            <!--tr = table row (linha)-->
+            <tr>
+                <!--Define o nome de uma coluna-->
+                <!--th = table header (cabeçalho)-->
+               <th style="width: 300px;">Empresa</th> 
+               <th>Contato</th>
+               <th>País</th>
+            </tr>
+            <tr style="height: 50px;">
+                <!--Define os dados de uma linha-->
+                <!--td = table data (dado)-->
+                <td>Empresa 1</td>
+                <td>Maria Anders</td>
+                <td>Alemanha</td>
+            </tr>
+            <tr>
+                <td>Empresa 2</td>
+                <td>Francisco Chang</td>
+                <td>México</td>
+            </tr>
+        </table>
+
+        <h2>Tabela com layout vertical</h2>
+        <table>
+            <caption>Tabela de empresas</caption>
+            <tr>
+                <th>Empresa</th>
+                <td>Empresa 1</td>
+                <td>Empresa 2</td>
+            </tr>
+            <tr>
+                <th>Contato</th>
+                <td>Maria Anders</td>
+                <td>Francisco Chang</td>
+            </tr>
+            <tr>
+                <th>País</th>
+                <td>Alemanha</td>
+                <td>México</td>
+            </tr>
+        </table>
+
+        <h2>Célula ocupando mais de uma coluna</h2>
+        <table style="width: 300px;">
+            <tr>
+                <th colspan="2">Nome</th>
+                <th>Idade</th>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+        </table>
+
+        <h2>Colspan e Rowspan</h2>
+        <table style="width: 300px; height: 100px;">
+            <tr>
+                <th rowspan="3">ABRIL</th>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+            </tr>
+        </table>
+
+        <h3>Usando colspan e rowspan junto</h3>
+
+        <table style="width: 300px; height: 100px;">
+            <tr>
+                <th colspan="3">2022</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td colspan="2" rowspan="2">FESTA</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+            </tr>
+        </table>
+
+        <h2>Usando a tag colgroup</h2>
+
+        <table style="width: 300px; height: 100px;">
+            <colgroup>
+                <col span="2" style="background-color: red;">
+            </colgroup>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </table>
+    </body>
+</html>
