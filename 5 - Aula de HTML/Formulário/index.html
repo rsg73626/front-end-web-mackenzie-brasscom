@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulários</title>
+    </head>
+    <body>
+        <h1>Formulários</h1>
+
+        <h2>Introdução</h2>
+        <form>
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome">
+            <br>
+            <input type="radio" id="radio-button">
+            <label for="radio-button">Label do radio button.</label>
+            <br>
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox">Label do checkbox.</label>
+            <br>
+            <input type="submit">
+            <input type="button" value="Botão">
+        </form>
+
+        <h2>Usando radio buttons</h2>
+        <form>
+            <p>Selecione a sua linguagem de desenvolvimento front-end favorita:</p>
+            <br>
+            <input type="radio" id="html" name="resposta" value="html">
+            <label for="html">HTML</label>
+            <br>
+            <input type="radio" id="css" name="resposta" value="css">
+            <label for="css">CSS</label>
+            <br>
+            <input type="radio" id="js" name="resposta" value="js">
+            <label for="js">JavaScript</label>
+        </form>
+
+        <h2>Usando checkbox</h2>
+        <form>
+            <p>Quais meios de transporte você utiliza?</p>
+            <br>
+            <input type="checkbox" id="carro" name="carro" value="carro">
+            <label for="carro">Carro</label>
+            <br>
+            <input type="checkbox" id="onibus" name="onibus" value="onibus">
+            <label for="onibus">Ônibus</label>
+            <br>
+            <input type="checkbox" id="metro" name="metro" value="metro">
+            <label for="metro">Metrô</label>
+        </form>
+
+        <h2>Botão submissão do formulário</h2>
+        <form>
+            <label for="input-nome">Nome:</label>
+            <input type="text" id="input-nome" name="nome">
+            <br>
+            <label for="sobrenome">Sobrenome: </label>
+            <input type="text" id="sobrenome" name="sobrenome">
+            <br>
+            <input type="submit" value="Confirmar">
+        </form>
+
+        <h2>Atributos da tag form</h2>
+        <form action="" target="_blank" method="POST" autocomplete="off">
+            <label for="input-nome">Nome:</label>
+            <input type="text" id="input-nome" name="nome">
+            <br>
+            <label for="sobrenome">Sobrenome: </label>
+            <input type="text" id="sobrenome" name="sobrenome">
+            <br>
+            <input type="submit" value="Confirmar">
+        </form>
+
+        <h2>Lista de seleção</h2>
+        <form action="">
+            <label for="select-carro">Selecione um carro:</label>
+            <br>
+            <select style="width:100px;" id="select-carro" name="carro" size="4" multiple>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat" selected>Fiat</option>
+                <option value="audi">Audi</option>
+            </select>
+            <br>
+            <input type="submit" value="Confirmar">
+        </form>
+
+        <h2>Caixa de texto</h2>
+        <form action="">
+            <label for="caixa-texto">Conte-me um pouco sobre você:</label>
+            <br>
+            <textarea id="caixa-texto" rows="10" cols="30">Texto padrão.</textarea>
+            <button type="button" onclick="alert('Mensagem')">Clique em mim.</button>
+        </form>
+
+        <h2>Usando fieldset</h2>
+        <form action="" target="_blank" method="POST" autocomplete="off">
+            <fieldset>
+                <legend>Dados pessoais</legend>
+                <label for="input-nome">Nome:</label>
+                <input type="text" id="input-nome" name="nome" maxlength="20" size="10">
+                <label for="sobrenome">Sobrenome: </label>
+                <input type="text" id="sobrenome" name="sobrenome" autofocus>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Contatos</legend>
+                <label for="input-contato">Contato:</label>
+                <input type="text" id="input-contato" name="contato" placeholder="(11) 91234-5678">
+            </fieldset>
+
+            <label for="quantity">Quantity:</label>
+            <br>
+            <input type="number" id="quantity" name="quantity" min="0" max="100" step="10" value="30">
+            <br>
+            <input type="submit" value="Confirmar">
+        </form>
+    </body>
+</html>

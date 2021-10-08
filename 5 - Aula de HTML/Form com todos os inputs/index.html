@@ -1,0 +1,159 @@
+<html lang="en-US">
+   <head>
+      <meta charset="utf-8">
+      <style>
+         html, body {
+         margin: 0;
+         padding: 0;
+         }
+         html {
+         width: 100%;
+         height: 100%;
+         }
+         body {
+         width: 100%;
+         height: 100%;
+         font-family: "Helvetica";
+         color: black;
+         }
+         h1, h2, h3, h4, h5, h6 {
+         margin: 10px 0;
+         }
+         h2, h3, h4, h5, h6 {
+         font-weight: normal;
+         }
+         h6 { font-size: 24px; }
+         h5 { font-size: 26px; }
+         h4 { font-size: 28px; }
+         h3 { font-size: 30px; }
+         h2 { font-size: 32px; }
+         h1 { font-size: 34px; }
+      </style>
+      <title>Form Complete</title>
+      <style></style>
+      <style>fieldset {
+         display: flex;
+         flex-direction: column;
+         background: pink;
+         border-color: black;
+         border-radius: 10px;
+         margin: 15px 0;
+         }
+         fieldset legend {
+         font-weight: bold;
+         color: white;
+         background: black;
+         font-size: 20px;
+         padding: 5px;
+         border-radius: 4px;
+         }
+         fieldset > * {
+         margin: 5px 0;
+         }
+         input, select {
+         height: 30px;
+         border: none;
+         padding-left: 5px;
+         border-radius: 4px;
+         }
+         label {
+         display: flex;
+         align-items: center;
+         }
+         #acceasy-auto-tag-id-0 {
+         display: grid;
+         grid-template-rows: auto auto;
+         grid-template-columns: auto auto auto;
+         }
+         #acceasy-auto-tag-id-1 {
+         grid-row-start: 1;
+         grid-column-start: 2;
+         grid-column-end: 3;
+         grid-row-end: 2;
+         }
+         #acceasy-auto-tag-id-2 {
+         grid-row-start: 2;
+         grid-column-start: 2;
+         grid-column-end: 3;
+         }
+      </style>
+   </head>
+   <body id="acceasy-auto-tag-id-0">
+      <!-- <script>
+         alert('Uncomment the different js files in the example.html file to explore the examples.')
+         </script> -->
+      <h1 id="acceasy-auto-tag-id-1">Form</h1>
+      <form action="#" method="GET" id="acceasy-auto-tag-id-2">
+         <fieldset>
+            <legend>Inputs</legend>
+            <input type="text" name="input-text" required="required" placeholder="input type text"><input type="hidden" name="input-hidden" required="required" value="input-hidden-value"><input type="text" name="input-text-by-shortcut" required="required" placeholder="input type text by shortcut"><input type="tel" name="input-tel" required="required" placeholder="input type tel"><input type="url" name="input-url" required="required" placeholder="input type url"><input type="email" name="input-email" required="required" placeholder="input type email"><input type="password" name="input-password" required="required" placeholder="input type password"><input type="date" name="input-date" required="required" placeholder="input type date"><input type="month" name="input-mont" required="required" placeholder="input type month"><input type="time" name="input-time" required="required" placeholder="input type time"><input type="datetime-local" name="input-localdatetime" required="required" placeholder="input type local-datetime"><input type="number" name="input-number" required="required" placeholder="input type number"><label for="input-range">Input type range: </label><input type="range" name="input-range" required="required" placeholder="input type range" id="input-range"><label for="input-color">Input type color: </label><input type="color" name="input-color" required="required" placeholder="input type color" id="input-color"><label><input type="checkbox" name="input-checkbox" checked="checked">input type checkbox</label><label><input type="checkbox" name="input-checkbox-2" checked="checked">input type checkbox</label><label><input type="checkbox" name="input-checkbox-3">input type checkbox</label><label><input type="radio" name="input-radio" value="input-radio-1" checked="checked">input type radio</label><label><input type="radio" name="input-radio" value="input-radio-2">input type radio</label><label><input type="radio" name="input-radio" value="input-radio-3">input type radio</label><label>Input type file: <input type="file" name="input-file" required="required" placeholder="input type file"></label>
+         </fieldset>
+         <fieldset>
+            <legend>Select</legend>
+            <label for="select">Simple select: </label>
+            <select name="select" id="select">
+               <option value="option-1">Option 1</option>
+               <option value="option-2">Option 2</option>
+               <option value="option-3">Option 3</option>
+            </select>
+            <label for="select-with-groups">With groups</label>
+            <select name="select-with-groups" id="select-with-groups">
+               <optgroup label="Group 1">
+                  <option value="option-1">Option 1</option>
+                  <option value="option-2">Option 2</option>
+                  <option value="option-3">Option 3</option>
+               </optgroup>
+               <optgroup label="Group 2">
+                  <option value="option-4">Option 4</option>
+                  <option value="option-5">Option 5</option>
+                  <option value="option-6">Option 6</option>
+               </optgroup>
+               <optgroup label="Group 3">
+                  <option value="option-7">Option 7</option>
+                  <option value="option-8">Option 8</option>
+                  <option value="option-9">Option 9</option>
+               </optgroup>
+            </select>
+         </fieldset>
+         <fieldset>
+            <legend>Textarea</legend>
+            <textarea name="text-area" style="resize: vertical; margin-top: 5px; margin-bottom: 5px; height: 54px;">Simple</textarea>
+            <textarea name="text-area" rows="5" cols="5" style="resize: vertical; margin-top: 5px; margin-bottom: 5px; height: 65px;">With 5 rows and 5 cols</textarea>
+         </fieldset>
+         <fieldset>
+            <legend>Datalist</legend>
+            <input name="input-datalist" required="required" placeholder="input with datalist" list="datalist">
+            <datalist id="datalist">
+               <option value="Datalist opt 1"></option>
+               <option value="Datalist opt 2"></option>
+               <option value="Datalist opt 3"></option>
+            </datalist>
+            <input name="input-datalist-2" required="required" placeholder="input with datalist with labels" list="datalist-2">
+            <datalist id="datalist-2">
+               <option value="Datalist opt 1">The first option</option>
+               <option value="Datalist opt 2">The second option</option>
+               <option value="Datalist opt 3">The third option</option>
+            </datalist>
+         </fieldset>
+         <fieldset>
+            <legend>Output</legend>
+            <input type="number" name="a" value="10" onchange="output.innerHTML = parseInt(a.value) + parseInt(b.value);">+<input type="number" name="b" value="10" onchange="output.innerHTML = parseInt(a.value) + parseInt(b.value);">=<label>Output: <output name="output" for="a b" value="20">20</output></label>
+         </fieldset>
+         <fieldset>
+            <legend>Progress</legend>
+            <label>Progress (<span id="done">NaN</span>/<span id="total">10</span>): <progress value="0" max="10" id="progress"></progress></label><button type="button" onclick="progress.value = parseInt(progress.value) + 1; done.innerHTML = progress.value;">Increase Progress</button><button type="button" onclick="progress.value = parseInt(progress.value) - 1; done.innerHTML = progress.value;">Decrease Progress</button>
+         </fieldset>
+         <fieldset>
+            <legend>Meter</legend>
+            <label>5 of 10: <meter min="0" max="10" value="5">5 of 10</meter></label>
+            <p>0 to 10, low = 3, high = 7, optimum = 10.</p>
+            <p>Using different values.</p>
+            <label><meter min="0" max="10" value="0" high="7" low="3" optimum="10"></meter>(value = 0)</label><label><meter min="0" max="10" value="1" high="7" low="3" optimum="10"></meter>(value = 1)</label><label><meter min="0" max="10" value="2" high="7" low="3" optimum="10"></meter>(value = 2)</label><label><meter min="0" max="10" value="3" high="7" low="3" optimum="10"></meter>(value = 3)</label><label><meter min="0" max="10" value="4" high="7" low="3" optimum="10"></meter>(value = 4)</label><label><meter min="0" max="10" value="5" high="7" low="3" optimum="10"></meter>(value = 5)</label><label><meter min="0" max="10" value="6" high="7" low="3" optimum="10"></meter>(value = 6)</label><label><meter min="0" max="10" value="7" high="7" low="3" optimum="10"></meter>(value = 7)</label><label><meter min="0" max="10" value="8" high="7" low="3" optimum="10"></meter>(value = 8)</label><label><meter min="0" max="10" value="9" high="7" low="3" optimum="10"></meter>(value = 9)</label><label><meter min="0" max="10" value="10" high="7" low="3" optimum="10"></meter>(value = 10)</label>
+         </fieldset>
+         <fieldset>
+            <legend>Buttons</legend>
+            <button type="button" onclick="alert(&quot;You clicked button!&quot;)">Button</button><input type="button" value="Input Type Button" onclick="alert(&quot;You clicked the Input type = button!&quot;)"><input type="reset" value="Reset"><input type="submit" value="Submit"><input type="image" src="https://visibleclassroom.com/wp-content/uploads/2018/05/new-send-button.png" style="width: 280px; height: 100px; ">
+         </fieldset>
+      </form>
+   </body>
+</html>
