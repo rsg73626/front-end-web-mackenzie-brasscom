@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS</title>
+        <!-- TUDO QUE ESTIVER AQUI É UM COMENTÁRIO (será ignorado pelo navegador) -->
+        <link rel="stylesheet" href="style.css">
+        <style>
+            /* 
+            ISSO É UM COMENRÁRIO EM CSS
+            TUDO QUE ESTIVER AQUI SERÁ IGNORADO PELO NAVEGADOR
+            */
+            /*
+            PADRÃO DE DECLARAÇÕES CSS
+            seletor { 
+                propriedade: valor;
+                propriedade: valor;
+                propriedade: valor;
+                propriedade: valor;
+            }
+            */
+            p {
+                font-family: Arial, Helvetica, sans-serif;
+                color: dimgray;
+                background-color: white;
+            }
+
+            h1, h2 {
+
+            }
+
+            h3 {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #titulo-seletores {
+                border-width: 3px;
+                border-color: orange;
+                border-style: dotted;
+            }
+
+            .titulos {
+                background-color: salmon;
+                color: white;
+            }
+
+            p, #titulo-seletores, .titulos {
+
+            }
+
+            p.centralizado {
+                text-align: center;
+            }
+
+            .negrito {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body style="background-color:lightgreen;">
+        <h1 class="titulos" style="color: black;">Meu primeiro CSS</h1>
+
+        <h2 class="titulos">Exemplos de CSS</h2>
+
+        <h3 class="titulos">Uso do CSS inline (em linha)</h3>
+        <p>Consiste em definir declarações CSS como valor do atributo style nas tags de abertura dos elementos HTML. Pode ser usada para qualquer elemento da minha página.</p>
+
+        <h3 class="titulos">Uso do CSS interno (dentro do arquivo .html)</h3>
+        <p class="negrito">Consiste em utilizar a tag style e definir os códigos CSS (composto de seletor e bloco de declarações) como conteúdo dessa tag. A tag style pode ser colocada em qualquer lugar do documento, mas geralmente é colocada dentro da tag head.</p>
+
+        <h3 class="titulos">Uso do CSS externo (em um arquivo .css separado)</h3>
+        <p>Consiste em definir um novo arquivo .css, independente de qualquer outra arquivo, que pode ser importado para as nossas diferentes páginas HTML.</p>
+
+        <h3 class="titulos" id="titulo-seletores">Seletores</h3>
+        <p>Seletores apontam para os elementos que devem receber o estilo especificado no bloco de declarações CSS. Há diferentes tipos de seletores:</p>
+        <ul>
+            <li class="centralizado">Seletor por elemento: usa como seletor o nome de um elemento.</li>
+            <li>Seletor por identificador: usa como seletor o valor do atributo id de algum elemento do documento.</li>
+            <li>Seletor por classe: usa como seletor o valor do atributo class de algum elemento do documento.</li>
+        </ul>
+        <p class="centralizado">Esses seletores podem ser usados em conjunto para múltiplas seleções (cada seletor deve ser separado por vírgula).</p>
+
+    </body>
+</html>
