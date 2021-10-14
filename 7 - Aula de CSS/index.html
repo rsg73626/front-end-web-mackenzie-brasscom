@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Continuação CSS</title>
+        <style>
+            .exemplos-background {
+                list-style: none;
+            }
+
+            /* Selecionando todos os elementos li envoltos por um elemento cujo valor do atributo id é igual à exemplos-background. */
+            .exemplos-background li {
+                /* Estilizando cada li como um quadrado de 200px x 200px e borda preta. */
+                width: 200px;
+                height: 200px;
+                border: 1px solid black;
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            .exemplos-background .li-com-imagem-de-fundo {
+                width:600px;
+                height:600px;
+                background-image: url("https://playableconcepts.aalto.fi/wp-content/uploads/2020/05/tiling_wall.png");
+            }
+
+            .fundo-sem-repeticao {
+                background-repeat: no-repeat;
+            }
+
+            .elemento-com-conteudo {
+                background-image: url("https://i.redd.it/6k727d3k7gz21.png");
+                background-repeat: no-repeat;
+            }
+
+            #paragrafo-personalizado {
+                width: 600px;
+                height: 600px;
+                background: lightblue url("https://static.vecteezy.com/ti/vetor-gratis/t2/2206463-template-background-technology-gr%C3%A1tis-vetor.jpg") no-repeat fixed center center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Continuação da aula de CSS</h1>
+        <main>
+            <section>
+                <article>
+                    <h2>Cores</h2>
+                    <p style="background-color:steelblue;">Parágrafo colorido</p>
+                    <p style="background-color:thistle;">Parágrafo colorido</p>
+                    <p style="background-color:wheat;">Parágrafo colorido</p>
+                    <p style="color:tomato;">Parágrafo com texto colorido</p>
+                    <p style="color:rgb(31, 89, 116);">Parágrafo com texto colorido</p>
+                    <p style="color:rgba(31, 89, 116, 0.8);">Parágrafo com texto colorido</p>
+                    <p style="color:#988998;">Parágrafo com texto colorido</p>
+                    <p style="border-color:yellow;border-width:2px;border-style:solid;">Parágrafo com borda colorida</p>
+                    <p style="border-color:violet;border-width:2px;border-style:solid;">Parágrafo com borda colorida</p>
+                    <p style="border-color:yellowgreen;border-width:2px;border-style:solid;">Parágrafo com borda colorida</p>
+                    <p style="border: 2px solid rgb(80, 80, 80);">Parágrafo com borda colorida (atalho)</p>
+                    <p style="background-color:hsl(137, 50%, 50%);">Parágrafo colorido com HSL</p>
+                    <p style="background-color:hsl(100, 50%, 30%);">Parágrafo colorido com HSL</p>
+                    <p style="background-color:hsl(38, 55%, 50%);">Parágrafo colorido com HSL</p>
+                    <p style="background-color:hsla(137, 50%, 50%, 0.3);">Parágrafo colorido com HSLA</p>
+                    <p style="background-color:hsla(100, 50%, 30%, 0.3);">Parágrafo colorido com HSLA</p>
+                    <p style="background-color:hsla(38, 55%, 50%, 0.3);">Parágrafo colorido com HSLA</p>
+                </article>
+                <article>
+                    <h2>Background (fundo dos elementos)</h2>
+                    <p>A seguir, algumas maneiras de se estilizar o fundos dos elementos via CSS:</p>
+                    <ul class="exemplos-background">
+                        <li style="background-color:cyan;">Background-color</li>
+                        <li style="color:white;background-image: url('https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');">Background-image</li>
+                        <li class="li-com-imagem-de-fundo" style="background-repeat: repeat;">Background-image padrão</li>
+                        <li class="li-com-imagem-de-fundo" style="background-repeat: no-repeat;">Background-image sem repetição</li>
+                        <li class="li-com-imagem-de-fundo" style="background-repeat: repeat-x;">Background-image repetindo somente em x (horizontal)</li>
+                        <li class="li-com-imagem-de-fundo" style="background-repeat: repeat-y;">Background-image repetindo somente em y (vertical)</li>
+                        <li class="li-com-imagem-de-fundo" style="background-repeat: round;">Background-image arredondando (preenche todo o fundo)</li>
+                        <li class="li-com-imagem-de-fundo" style="background-repeat: space;">Background-image com espaçamento (preenche todo o fundo)</li>
+                    </ul>
+                </article>
+                <article>
+                    <h2>Posição da imagem de fundo (background-position)</h2>
+                    <ul class="exemplos-background">
+                        <li class="li-com-imagem-de-fundo fundo-sem-repeticao" style="background-position: left top;">left top</li>
+                        <li class="li-com-imagem-de-fundo fundo-sem-repeticao" style="background-position: left center;">left center</li>
+                        <li class="li-com-imagem-de-fundo fundo-sem-repeticao" style="background-position: left bottom;">left bottom</li>
+                        <li class="li-com-imagem-de-fundo fundo-sem-repeticao" style="background-position: center center;">center center</li>
+                        <!-- Exemplos com todos os valores para background-position podem ser encontrado no link a seguir: https://www.w3schools.com/cssref/playit.asp?filename=playcss_background-position -->
+                    </ul>
+                </article>
+                <article>
+                    <h2>Movimentação do fundo (background-attachment)</h2>
+
+                    <section>
+                        <article class="elemento-com-conteudo" style="background-attachment: fixed;">
+                            <h3>Fundo fixo</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet elit nisl. Aenean fermentum tempus dui quis facilisis. Suspendisse vel lectus in odio vestibulum sodales. Mauris dignissim imperdiet nulla id sagittis. Integer ornare leo et quam condimentum mattis. Sed nec tincidunt odio. Maecenas ut nulla urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas semper egestas quam, sit amet interdum mi imperdiet id. Integer tempus, tellus vel faucibus volutpat, dui sem scelerisque lacus, at tristique leo dui quis metus.</p>
+                            <p>Pellentesque cursus diam et dolor rutrum, interdum volutpat erat varius. Nulla facilisi. Sed condimentum lacus ante, in ornare arcu lobortis eu. Nunc rutrum est pulvinar, consequat risus quis, vestibulum orci. Ut eu ipsum id ex ultricies euismod ut vel risus. Aenean aliquam turpis orci, eget viverra augue mollis quis. Suspendisse nec mi sapien. Mauris quam est, fermentum a convallis vitae, blandit feugiat magna.</p>
+                            <p>Donec tempus eu odio eu auctor. Fusce dictum odio sit amet orci congue congue at vel arcu. Mauris vel dictum leo. Cras turpis lectus, molestie tempor orci eget, sagittis efficitur arcu. Duis aliquet est sem, eu ultricies nisl commodo eget. Integer id ligula elit. Vestibulum dignissim volutpat mauris id sodales. Nam in felis porttitor, auctor massa vel, vulputate nisl. Pellentesque rhoncus dolor id mauris volutpat, luctus elementum arcu pulvinar. Nulla vitae elit tempor, ultrices magna at, maximus massa. Quisque id pellentesque nibh. Sed id rutrum odio, eget luctus enim. Integer viverra massa vitae velit ullamcorper viverra. Pellentesque efficitur vulputate massa at tincidunt. Vivamus quis fermentum sem.</p>
+                        </article>
+                        <article class="elemento-com-conteudo" style="background-attachment: scroll;">
+                            <h2>Fundo móvel</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet elit nisl. Aenean fermentum tempus dui quis facilisis. Suspendisse vel lectus in odio vestibulum sodales. Mauris dignissim imperdiet nulla id sagittis. Integer ornare leo et quam condimentum mattis. Sed nec tincidunt odio. Maecenas ut nulla urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas semper egestas quam, sit amet interdum mi imperdiet id. Integer tempus, tellus vel faucibus volutpat, dui sem scelerisque lacus, at tristique leo dui quis metus.</p>
+                            <p>Pellentesque cursus diam et dolor rutrum, interdum volutpat erat varius. Nulla facilisi. Sed condimentum lacus ante, in ornare arcu lobortis eu. Nunc rutrum est pulvinar, consequat risus quis, vestibulum orci. Ut eu ipsum id ex ultricies euismod ut vel risus. Aenean aliquam turpis orci, eget viverra augue mollis quis. Suspendisse nec mi sapien. Mauris quam est, fermentum a convallis vitae, blandit feugiat magna.</p>
+                            <p>Donec tempus eu odio eu auctor. Fusce dictum odio sit amet orci congue congue at vel arcu. Mauris vel dictum leo. Cras turpis lectus, molestie tempor orci eget, sagittis efficitur arcu. Duis aliquet est sem, eu ultricies nisl commodo eget. Integer id ligula elit. Vestibulum dignissim volutpat mauris id sodales. Nam in felis porttitor, auctor massa vel, vulputate nisl. Pellentesque rhoncus dolor id mauris volutpat, luctus elementum arcu pulvinar. Nulla vitae elit tempor, ultrices magna at, maximus massa. Quisque id pellentesque nibh. Sed id rutrum odio, eget luctus enim. Integer viverra massa vitae velit ullamcorper viverra. Pellentesque efficitur vulputate massa at tincidunt. Vivamus quis fermentum sem.</p>
+                        </article>
+                        <article class="elemento-com-conteudo" style="background-attachment: local;">
+                            <h2>Fundo móvel local</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet elit nisl. Aenean fermentum tempus dui quis facilisis. Suspendisse vel lectus in odio vestibulum sodales. Mauris dignissim imperdiet nulla id sagittis. Integer ornare leo et quam condimentum mattis. Sed nec tincidunt odio. Maecenas ut nulla urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas semper egestas quam, sit amet interdum mi imperdiet id. Integer tempus, tellus vel faucibus volutpat, dui sem scelerisque lacus, at tristique leo dui quis metus.</p>
+                            <p>Pellentesque cursus diam et dolor rutrum, interdum volutpat erat varius. Nulla facilisi. Sed condimentum lacus ante, in ornare arcu lobortis eu. Nunc rutrum est pulvinar, consequat risus quis, vestibulum orci. Ut eu ipsum id ex ultricies euismod ut vel risus. Aenean aliquam turpis orci, eget viverra augue mollis quis. Suspendisse nec mi sapien. Mauris quam est, fermentum a convallis vitae, blandit feugiat magna.</p>
+                            <p>Donec tempus eu odio eu auctor. Fusce dictum odio sit amet orci congue congue at vel arcu. Mauris vel dictum leo. Cras turpis lectus, molestie tempor orci eget, sagittis efficitur arcu. Duis aliquet est sem, eu ultricies nisl commodo eget. Integer id ligula elit. Vestibulum dignissim volutpat mauris id sodales. Nam in felis porttitor, auctor massa vel, vulputate nisl. Pellentesque rhoncus dolor id mauris volutpat, luctus elementum arcu pulvinar. Nulla vitae elit tempor, ultrices magna at, maximus massa. Quisque id pellentesque nibh. Sed id rutrum odio, eget luctus enim. Integer viverra massa vitae velit ullamcorper viverra. Pellentesque efficitur vulputate massa at tincidunt. Vivamus quis fermentum sem.</p>
+                        </article>
+                    </section>
+                </article>
+                <article>
+                    <h2>Atalho para background</h2>
+                    <p id="paragrafo-personalizado">Parágrafo com background.</p>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>
