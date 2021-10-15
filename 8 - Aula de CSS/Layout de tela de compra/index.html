@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Precificação</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            main {
+                width: 200px;
+                height: 990px;
+            }
+
+            main section {
+                width: 100%; /* 100% da largura do elemento pai (<main>). */
+                height: 100%; /* 100% da altura do elemento pai (<main>). */
+                border: 1px solid gray;
+            }
+
+            main section article {
+                width: 100%; /* 100% da largura do elemento pai (<section>). */
+                height: 330px;
+                /* border: 1px solid gray; */
+            }
+
+            main section article h2 {
+                margin-top: 0;
+            }
+
+            main section article h2, main section article p {
+                width: 100%; /* 100% da largura do elemento pai (<article>). */
+                text-align: center;
+            }
+
+            main section article h2 span {
+                width: 100%; /* 100% da largura do elemento pai (<h2>). */
+            }
+
+            .plano {
+                font-size: 20px;
+            }
+
+            .preco {
+                font-size: 40px;
+            }
+
+            .botao1, .botao2 {
+                width: 100px;
+                height: 30px;
+                border-radius: 5px;
+                margin-left: 50px;
+            }
+
+            .botao1 {
+                border: 1px solid #2a9df4;
+                color: #2a9df4;
+                background-color: #fff;
+            }
+
+            .botao2 {
+                background-color: #ffe800;
+                border-style: none;
+            }
+
+            .opcao-destacada {
+                background-color: #2a9df4;
+                color: #fff;
+                width: 190px;
+                margin-left: 5px;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Precificação</h1>
+        <main>
+            <section>
+                <article>
+                    <h2>
+                        <span class="plano">Plano Simples</span><br>
+                        <span class="preco">R$ 10</span>
+                    </h2>
+                    <p>Funcionalidade 1</p>
+                    <p>Funcionalidade 2</p>
+                    <p>Funcionalidade 3</p>
+                    <p>Funcionalidade 4</p>
+                    <p>Funcionalidade 5</p>
+                    <button class="botao1" type="button" onclick="alert('Comprando plano simples')">Comprar</button>
+                </article>
+                <article class="opcao-destacada">
+                    <h2>
+                        <span class="plano">Plano Médio</span><br>
+                        <span class="preco">R$ 50</span>
+                    </h2>
+                    <p>Funcionalidade 6</p>
+                    <p>Funcionalidade 7</p>
+                    <p>Funcionalidade 8</p>
+                    <p>Funcionalidade 9</p>
+                    <p>Funcionalidade 10</p>
+                    <button class="botao2" type="button" onclick="alert('Comprando plano médio')">Comprar</button>
+                </article>
+                <article>
+                    <h2>
+                        <span class="plano">Plano Avançado</span><br>
+                        <span class="preco">R$ 99</span>
+                    </h2>
+                    <p>Funcionalidade 11</p>
+                    <p>Funcionalidade 12</p>
+                    <p>Funcionalidade 13</p>
+                    <p>Funcionalidade 14</p>
+                    <p>Funcionalidade 15</p>
+                    <button class="botao1" type="button" onclick="alert('Comprando plano avançado')">Comprar</button>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>
