@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Revisão de CSS</title>
+        
+        <style>
+           #exemplo-css-interno {
+               border: 2px solid orange;
+               border-radius: 10px;
+               background-color: aqua;
+           } 
+        </style>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body>
+        <h1>Revisão de CSS</h1>
+
+        <h2 id="titulo">Identificadores (id) e classes (class)</h2>
+        <p id="paragrafo" class="tag-p outra-classe">O valor do atributo id deve ser único para cada elemento em uma página.</p>
+        <p id="paragrafo2" class="tag-p">O valor do atributo class pode se repetir para mais de um elmento na mesma página.</p>
+        <p>Um elemento pode ter id e classe ao mesmo tempo.</p>
+        <p>Um elemento pode ter mais de uma classe.</p>
+        <p>As diferentes classes de um elemento (valor atributo class) devem ser separadas com espaço.</p>
+
+        <h2>Formas de usar CSS</h2>
+        <ol>
+            <li><strong>Inline:</strong> CSS em linha. Utiliza o atributo style.</li>
+            <li><strong>Interno:</strong> Utiliza a tag style para definir blocos de declarações CSS dentro do documento HTML. Geralmente é colocado no head da página.</li>
+            <li><strong>Externo:</strong> Utiliza um arquivo .css para definir os estilos. Qualquer documento .html pode importar esse arquivo. Usa-se a tag link para fazer a imporatação.</li>
+        </ol>
+
+        <h3>Exemplos de elementos formatados com diferentes formas de uso do CSS</h3>
+        <ul>
+            <li style="color: red; border: 1px solid black;">Exemplo 1 - CSS inline (ou em linha).</li>
+            <li id="exemplo-css-interno">Exemplo 2 - CSS interno.</li>
+            <li class="exemplo-css-externo">Exemplo 3 - CSS externo.</li>
+        </ul>
+        
+        <h2>Hierarquia do funcionamento do CSS</h2>
+        <p>As definições de estilo mais próximas aos elementos são as que prevalecem.</p>
+        <p>CSS inline (em linha) está mais próximo dos elementos do que CSS interno e externo.</p>
+        <p>Entre CSS interno e externo, o que vai estar mais próximo dos elementos depende da ordem de criação deles dentro do documento .html.</p>
+
+        <h2>Revisão (rápida) sobre inputs</h2>
+        <form action="www.meusite.com/cadastro/novo" method="POST">
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" placeholder="digite seu nome" id="nome">
+            <br>
+            <label for="email">E-mail: </label>
+            <input type="email" name="email" placeholder="digite seu e-mail" id="email">
+            <br>
+            <label for="senha">Senha: </label>
+            <input type="password" name="senha" placeholder="digite uma senha (6 digitos)" id="senha" maxlength="6">
+            <br>
+            <label for="senha-conf">Confirmação de Senha: </label>
+            <input type="password" name="senha-conf" placeholder="digite uma senha (6 digitos)" id="senha-conf" maxlength="6">
+            <br>
+            <input type="submit" value="Cadastrar">
+            <input type="reset" value="Limpar formulário">
+        </form>
+        <style>
+            input {
+                width: 200px;
+                height: 60px;
+            }
+        </style>
+    </body>
+</html>

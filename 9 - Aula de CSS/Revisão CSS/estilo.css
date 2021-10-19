@@ -1,0 +1,6 @@
+
+.exemplo-css-externo {
+    width: 500px;
+    height: 300px;
+    background-image: url("http://i3.wikimapia.org/?x=23907&y=38020&zoom=16&type=map&lng=0");
+}
