@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Posicionamento</title>
+        <style>
+            .static {
+                position: static;
+                top: 1000px;
+                left: 200px;
+                right: 1000px;
+            }
+
+            .p-relative {
+                position: relative;
+                left: 50px;
+                top: 10px;
+            }
+
+            nav {
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                background-color: beige;
+                height: 60px;
+                width: 100%;
+            }
+
+            nav ul {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            nav ul li {
+                display: inline;
+                width: 20%;
+                height: 100%;
+                padding-left: 100px;
+                line-height: 60px;
+            }
+
+            nav ul li a {
+                width: 200px;
+            }
+
+            h1 {
+                margin-top: 80px;
+            }
+
+            #container {
+                position: relative;
+            }
+
+            #article-absolute {
+                position: absolute;
+                left: 100px;
+                top: 100px;
+                /* right: 100px;
+                bottom: 100px; */
+            }
+
+            #subsecao {
+                position: sticky;
+                top: 60px;
+                background-color: red;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#static">Static</a></li>
+                <li><a href="#relative">Relative</a></li>
+                <li><a href="#fixed">Fixed</a></li>
+                <li><a href="#absolute">Absolute</a></li>
+                <li><a href="#sticky">Sticky</a></li>
+            </ul>
+        </nav>
+        <h1>Posicionamento com CSS (propriedade <i>position</i>).</h1>
+
+        <h2 id="static">Static</h2>
+        <p class="static">Esse elemento está posicionado com o método estático (valor static para a propriedade position no CSS).</p>
+
+        <h2 id="subsecao">Posicionamentos relativos</h2>
+
+        <h3 id="relative">Relative</h3>
+        <p>Elementos posicionados relativamente têm sua posição alterada pelo valor das propriedade top (topo), bottom (parte de baixo), left (lado esquerda) e right (lado direito). O posicionamento do elemento será calculado a partir da sua posição original levando em conta o valor dessas quatro propriedades.</p>
+        <p>Parágrafo com posicionamento estático (static).</p>
+        <p class="p-relative">Parágrafo com posicionamento relativo.</p>
+
+        <h3 id="fixed">Fixed</h3>
+        <p>Elementos posicionados relativamente à tela, ou seja, usando o valor fixed para a propriedade position, têm sua posição alterada pelo valor das propriedade top (topo), bottom (parte de baixo), left (lado esquerdo) e right (lado direito). </p>
+        <p>O posicionamento dos elementos fixos será calculado a partir do valor dessas quatro propriedades com relação ao tamanho da tela do computador.</p>
+        <p>Elementos posicionados fixamente não se movem mesmo que a página seja escrolada.</p>
+
+        <h3 id="absolute">Absolute</h3>
+        <p>Elementos que usam o valor absolute para a propriedade position podem ser posicionados relativamente ao elemento.</p>
+        <p>Usa-se as propriedade top, bottom, left e right para posicionar os elementos.</p>
+        <p>Caso o elemento esteja dentro do body ele será posicionado com relação ao corpo da página, e quando a mesma escrolar, o elemento também irá se mover.</p>
+
+        <section id="container" style="width: 300px; height: 300px; border: 2px solid green;">
+            <article id="article-absolute" style="width: 100px; height: 100px; background-color: red;">
+                Article dentro de uma section
+            </article>
+        </section>
+
+        <h3 id="sticky">Sticky</h3>
+    </body>
+</html>
