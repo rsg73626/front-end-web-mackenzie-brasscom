@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Flexbox</title>
+        <style>
+            body {
+                width: 60%;
+                margin: auto;
+            }
+
+            .container {
+                background-color: steelblue;
+                display: flex;
+            }
+
+            .container article {
+                background-color: lightgray;
+                border: 1px solid black;
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Flexbox CSS</h1>
+        <main>
+            <h2>Criando um flexbox</h2>
+            <section class="container">
+                <article>Item 1</article>
+                <article>Item 2</article>
+                <article>Item 3</article>
+            </section>
+
+            <h2>flex-direction: column</h2>
+            <section class="container" style="flex-direction: column;">
+                <article>Item 1</article>
+                <article>Item 2</article>
+                <article>Item 3</article>
+            </section>
+
+            <h2>flex-direction: column-reverse</h2>
+            <section class="container" style="flex-direction: column-reverse;">
+                <article>Item 1</article>
+                <article>Item 2</article>
+                <article>Item 3</article>
+            </section>
+
+            <h2>flex-direction: row</h2>
+            <section class="container" style="flex-direction: row;">
+                <article>Item 1</article>
+                <article>Item 2</article>
+                <article>Item 3</article>
+            </section>
+
+            <h2>flex-direction: row-reverse</h2>
+            <section class="container" style="flex-direction: row-reverse;">
+                <article>Item 1</article>
+                <article>Item 2</article>
+                <article>Item 3</article>
+            </section>
+
+            <h2>flex-wrap: wrap</h2>
+            <section class="container" style="flex-wrap: wrap;">
+                <article>Item 1</article>
+                <article>Item 2</article>
+                <article>Item 3</article>
+                <article>Item 4</article>
+                <article>Item 5</article>
+                <article>Item 6</article>
+                <article>Item 7</article>
+                <article>Item 8</article>
+                <article>Item 9</article>
+                <article>Item 10</article>
+                <article>Item 11</article>
+                <article>Item 12</article>
+            </section>
+
+            <h2>flex-wrap: nowrap</h2>
+            <section class="container" style="flex-wrap: nowrap;">
+                <article>Item 1</article>
+                <article>Item 2</article>
+                <article>Item 3</article>
+                <article>Item 4</article>
+                <article>Item 5</article>
+                <article>Item 6</article>
+                <article>Item 7</article>
+                <article>Item 8</article>
+                <article>Item 9</article>
+                <article>Item 10</article>
+                <article>Item 11</article>
+                <article>Item 12</article>
+            </section>
+
+            <h2>flex-wrap: wrap-reverse</h2>
+            <section class="container" style="flex-wrap: wrap-reverse;">
+                <article>Item 1</article>
+                <article>Item 2</article>
+                <article>Item 3</article>
+                <article>Item 4</article>
+                <article>Item 5</article>
+                <article>Item 6</article>
+                <article>Item 7</article>
+                <article>Item 8</article>
+                <article>Item 9</article>
+                <article>Item 10</article>
+                <article>Item 11</article>
+                <article>Item 12</article>
+            </section>
+
+            <h2>flex-direction: column & flex-wrap: wrap</h2>
+            <section class="container" style="flex-direction: column; flex-wrap: wrap; height: 400px;">
+                <article>Item 1</article>
+                <article>Item 2</article>
+                <article>Item 3</article>
+                <article>Item 4</article>
+                <article>Item 5</article>
+                <article>Item 6</article>
+                <article>Item 7</article>
+                <article>Item 8</article>
+                <article>Item 9</article>
+                <article>Item 10</article>
+                <article>Item 11</article>
+                <article>Item 12</article>
+            </section>
+
+            <h2>flex-direction: column & flex-wrap: wrap usando flex-flow (atalho)</h2>
+            <section class="container" style="height: 400px; flex-flow: column wrap;">
+                <article>Item 1</article>
+                <article>Item 2</article>
+                <article>Item 3</article>
+                <article>Item 4</article>
+                <article>Item 5</article>
+                <article>Item 6</article>
+                <article>Item 7</article>
+                <article>Item 8</article>
+                <article>Item 9</article>
+                <article>Item 10</article>
+                <article>Item 11</article>
+                <article>Item 12</article>
+            </section>
+
+            <h2>justify-content: center</h2>
+            <section class="container" style="justify-content: center;">
+                <article>Item 1</article>
+                <article>Item 2</article>
+                <article>Item 3</article>
+            </section>
+
+            <h2>justify-content: center & flex-direction: column</h2>
+            <section class="container" style="height: 400px; flex-direction: column; justify-content: center;">
+                <article>Item 1</article>
+                <article>Item 2</article>
+                <article>Item 3</article>
+            </section>
+
+            <h2>flex-direction: row & justify-content: flex-end</h2>
+            <section class="container" style="flex-direction: row; justify-content: flex-end;">
+                <article>Item 1</article>
+                <article>Item 2</article>
+                <article>Item 3</article>
+            </section>
+
+            <h2>flex-direction: row & justify-content: flex-end</h2>
+            <section class="container" style="height: 400px; flex-direction: column; justify-content: flex-end;">
+                <article>Item 1</article>
+                <article>Item 2</article>
+                <article>Item 3</article>
+            </section>
+
+            <h2>flex-direction: row & justify-content: space-around</h2>
+            <section class="container" style="flex-direction: row; justify-content: space-around;">
+                <article>Item 1</article>
+                <article>Item 2</article>
+                <article>Item 3</article>
+            </section>
+
+            <h2>flex-direction: row & justify-content: space-around</h2>
+            <section class="container" style="height: 400px; flex-direction: column; justify-content: space-around;">
+                <article>Item 1</article>
+                <article>Item 2</article>
+                <article>Item 3</article>
+            </section>
+
+            <h2>flex-direction: row & justify-content: space-between</h2>
+            <section class="container" style="flex-direction: row; justify-content: space-between;">
+                <article>Item 1</article>
+                <article>Item 2</article>
+                <article>Item 3</article>
+            </section>
+
+            <h2>flex-direction: row & justify-content: space-between</h2>
+            <section class="container" style="height: 400px; flex-direction: column; justify-content: space-between;">
+                <article>Item 1</article>
+                <article>Item 2</article>
+                <article>Item 3</article>
+            </section>
+
+            <h2>flex-direction: row & align-items: center</h2>
+            <section class="container" style="height: 200px; flex-direction: row; align-items: center;">
+                <article>Item 1</article>
+                <article>Item 2</article>
+                <article>Item 3</article>
+            </section>
+
+            <h2>flex-direction: row & align-items: center</h2>
+            <section class="container" style="height: 400px; flex-direction: column; align-items: center;">
+                <article>Item 1</article>
+                <article>Item 2</article>
+                <article>Item 3</article>
+            </section>
+
+            <h2>flex-direction: row & align-items: center & justify-content: center</h2>
+            <section class="container" style="height: 200px; flex-direction: row; align-items: center; justify-content: center;">
+                <article>Item 1</article>
+                <article>Item 2</article>
+                <article>Item 3</article>
+            </section>
+
+            <h2>flex-direction: row & align-items: center & justify-content: center</h2>
+            <section class="container" style="height: 400px; flex-direction: column; align-items: center; justify-content: center;">
+                <article>Item 1</article>
+                <article>Item 2</article>
+                <article>Item 3</article>
+            </section>
+
+            <h2>align-items: stretch</h2>
+            <ul style="display: flex; align-items: stretch; height: 200px; background-color: lightgreen; list-style: none; padding: 0;">
+                <li style="background-color: red;">Item 1</li>
+                <li style="background-color: red;">Item 2</li>
+                <li style="background-color: red;">Item 3</li>
+            </ul>
+
+            <h2>align-items: stretch & flex-direction: column</h2>
+            <ul style="display: flex; flex-direction: column; align-items: stretch; height: 200px; background-color: lightgreen; list-style: none; padding: 0;">
+                <li style="background-color: red;">Item 1</li>
+                <li style="background-color: red;">Item 2</li>
+                <li style="background-color: red;">Item 3</li>
+            </ul>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+
+nav ul {
+    flex-direction: column;
+}
+
+nav {
+    height: 150px;
+}

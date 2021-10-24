@@ -95,7 +95,7 @@
         <h3 id="relative">Relative</h3>
         <p>Elementos posicionados relativamente têm sua posição alterada pelo valor das propriedade top (topo), bottom (parte de baixo), left (lado esquerda) e right (lado direito). O posicionamento do elemento será calculado a partir da sua posição original levando em conta o valor dessas quatro propriedades.</p>
         <p>Parágrafo com posicionamento estático (static).</p>
-        <p class="p-relative">Parágrafo com posicionamento relativo.</p>
+        <p class="p-relative" style="z-index: -1;">Parágrafo com posicionamento relativo.</p>
 
         <h3 id="fixed">Fixed</h3>
         <p>Elementos posicionados relativamente à tela, ou seja, usando o valor fixed para a propriedade position, têm sua posição alterada pelo valor das propriedade top (topo), bottom (parte de baixo), left (lado esquerdo) e right (lado direito). </p>
@@ -108,7 +108,7 @@
         <p>Caso o elemento esteja dentro do body ele será posicionado com relação ao corpo da página, e quando a mesma escrolar, o elemento também irá se mover.</p>
         <p>O elemento pai ao qual o posicionamento será relativo deve usar o posicionamento relative.</p>
 
-        <section id="container" style="width: 300px; height: 300px; border: 2px solid green;">
+        <section id="container" style="width: 300px; height: 300px; border: 2px solid green; z-index: -1;">
             <article id="article-absolute" style="width: 100px; height: 100px; background-color: red;">
                 Article dentro de uma section
             </article>

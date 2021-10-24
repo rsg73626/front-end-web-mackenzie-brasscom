@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Float</title>
+        <style>
+            article {
+                overflow: auto;
+                border: 3px solid green;
+                margin: 20px;
+            }
+
+            img {
+                width: 130px;
+                height: 130px;
+            }
+
+            p {
+                background-color: lightgray;
+            }
+
+            #exemplo-right img {
+                float: right;
+            }
+
+            #exemplo-left img {
+                float: left;
+            }
+
+            #exemplo-3 ul li {
+                float: left;
+            }
+
+            #exemplo-3 ol li {
+                float: right;
+            }
+        </style>
+        <link rel="icon" href="https://www.w3schools.com/css/pineapple.jpg" type="image/gif" sizes="16x16">
+    </head>
+    <body>
+        <h1>Exemplos de uso da propriedade float do CSS.</h1>
+        <section>
+            <article>
+                <h2>Sem float na imagem</h2>
+                <img src="https://www.w3schools.com/css/pineapple.jpg" alt="Foto de um abacaxí.">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...</p>
+            </article>
+            <article id="exemplo-right">
+                <h2>Exemplo do float right na imagem</h2>
+                <img src="https://www.w3schools.com/css/pineapple.jpg" alt="Foto de um abacaxí.">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...</p>
+            </article>
+            <article id="exemplo-left">
+                <h2>Exemplo do float left na imagem</h2>
+                <img src="https://www.w3schools.com/css/pineapple.jpg" alt="Foto de um abacaxí.">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...</p>
+            </article>
+            <article id="exemplo-3">
+                <h2>Exemplo com float left para colocar vários elemento na mesma linha (nas lis da ul e da ol).</h2>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+                <ol>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ol>
+            </article>
+        </section>
+        <section>
+            <h2>Usando a propriedade clear.</h2>
+            <p>A propriedade clear define o que deve acontecer com o elemento que vem depois de um elemento "flutuante" (elemento que o valor left ou right para a propriedade float).</p>
+            <p>Há cinco valores possíveis, left, right, both, none e inherit</p>
+            <ul>
+                <li>
+                    Left: faz com que o elemento não seja ajustado no espaço que foi liberado pelo elemento flutuante caso ele esteja flutuando para a esquerda (float: left).
+                </li>
+                <li>
+                    Right: faz com que o elemento não seja ajustado no espaço que foi liberado pelo elemento flutuante caso ele esteja flutuando para a direita (float: left).
+                </li>
+                <li>
+                    Both: faz com que o elemento não seja ajustado no espaço que foi liberado pelo elemento flutuante, independente da direção que foi usada.
+                </li>
+                <li>
+                    None: faz com que o elemento seja ajustado sempre.
+                </li>
+                <li>
+                    Inherit: faz com que o elemento herde a definição do elemento pai.
+                </li>
+            </ul>
+            <article>
+                <h3>Usando clear right</h3>
+                <p style="float: right;">Primeiro parágrafo flutuando para a direita.</p>
+                <p style="clear: right;">Segundo parágrafo com clear right.</p>
+            </article>
+            <article>
+                <h3>Usando clear left</h3>
+                <p style="float: left;">Primeiro parágrafo flutuando para a esquerda.</p>
+                <p style="clear: left;">Segundo parágrafo com clear left.</p>
+            </article>
+            <article>
+                <h3>Usando clear both</h3>
+                <p style="float: right;">Primeiro parágrafo flutuando para a direita.</p>
+                <p style="clear: both;">Segundo parágrafo com clear both.</p>
+            </article>
+            <article>
+                <h3>Usando clear both</h3>
+                <p style="float: left;">Primeiro parágrafo flutuando para a esquerda.</p>
+                <p style="clear: both;">Segundo parágrafo com clear both.</p>
+            </article>
+            <article>
+                <h3>Usando clear none</h3>
+                <p style="float: left;">Primeiro parágrafo flutuando para a esquerda.</p>
+                <p style="clear: none;">Segundo parágrafo com clear none.</p>
+            </article>
+        </section>
+    </body>
+</html>

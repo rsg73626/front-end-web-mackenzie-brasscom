@@ -25,7 +25,7 @@
                 border-width: 2px;
                 border-style: solid;
                 font-family: Arial, Helvetica, sans-serif;
-                float: left;
+                /* float: left; */
             }
             #quadrado1 {
                 border-color: lightblue;
@@ -55,13 +55,43 @@
     <body>
         <h1>Outras propriedades do CSS</h1>
 
-        <h2>Psedo-classes dos elementos</h2>
+        <h2>Pseudo-classes dos elementos</h2>
         <a href="https://www.google.com.br/">google.com</a>
 
         <section>
             <article id="quadrado1" class="quadrado">Primeiro</article>
             <article id="quadrado2" class="quadrado">Segundo</article>
             <article id="quadrado3" class="quadrado">Terceiro</article>
+        </section>
+
+        <h2>Unidade de medida relativa</h2>
+
+        <h3>Usando a unidade em</h3>
+
+        <section style="font-size: 20px">
+            <p>Texto</p>
+            <article style="font-size: 2em;">
+                <p>Texto</p>
+                <ul style="font-size: 2em;">
+                    <li>
+                        <p>Texto</p>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <h3>Usando a unidade rem</h3>
+
+        <section style="font-size: 20px">
+            <p>Texto</p>
+            <article style="font-size: 2rem;">
+                <p>Texto</p>
+                <ul style="font-size: 2rem;">
+                    <li>
+                        <p>Texto</p>
+                    </li>
+                </ul>
+            </article>
         </section>
     </body>
 </html>
