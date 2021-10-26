@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            article {
+                border: 2px solid seagreen;
+                margin: 5px;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Primeira aula de JavaScript</h1>
+
+        <section>
+            <article>
+                <h2>Mudando o conteúdo de um elemento</h2>
+                <p id="exemplo-1">Primeiro parágrafo.</p>
+                <button type="button" onclick="document.getElementById('exemplo-1').innerHTML='Novo texto!'">
+                    Mudar conteúdo!
+                </button>
+            </article>
+            <article>
+                <h2>Mudando atributo de um elemento</h2>
+                <img id="exemplo-2" src="https://i.stack.imgur.com/b983w.jpg" alt="Lâmpada apagada" style="width: 100px; height: 130px;">
+                <button type="button" onclick="document.getElementById('exemplo-2').src='https://i.stack.imgur.com/ybxlO.jpg'">Acender</button>
+                <button type="button" onclick="document.getElementById('exemplo-2').src='https://i.stack.imgur.com/b983w.jpg'">Apagar</button>
+            </article>
+            <article>
+                <h2>Mudando estilo de um elemento</h2>
+                <p id="exemplo-3">Segundo parágrafo.</p>
+                <button type="button" onclick="document.getElementById('exemplo-3').style.border='2px solid red'">Adicionar borda</button>
+                <button type="button" onclick="document.getElementById('exemplo-3').style.border='none'">Remover borda</button>
+            </article>
+            <article>
+                <h2>Escodendo e mostrando um elemento</h2>
+                <img id="exemplo-4" src="http://cbissn.ibict.br/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png" alt="pinguins" style="width: 200px; height: 140px;">
+                <button type="button" onclick="document.getElementById('exemplo-4').style.display='none'">Esconder</button>
+                <button type="button" onclick="document.getElementById('exemplo-4').style.display='inline'">Mostrar</button>
+            </article>
+            <article>
+                <h2>Usando script com a tag &lt;script&gt;</h2>
+                <p id="exemplo-5">Terceiro parágrafo.</p>
+                <script>
+                    document.getElementById("exemplo-5").style.backgroundColor = "purple";
+                    document.getElementById("exemplo-5").style.color = "white";
+                </script>
+            </article>
+            <article>
+                <h2>Mudando estilo de um elemento através de uma função</h2>
+                <p id="exemplo-6">Quarto parágrafo.</p>
+                <script>
+                    function mudarEstiloParagrafo6() {
+                        document.getElementById("exemplo-6").style.backgroundColor = "orange";
+                        document.getElementById("exemplo-6").style.color = "purple";
+                        document.getElementById("exemplo-6").style.width = "100px";
+                        document.getElementById("exemplo-6").style.height = "100px";
+                    }
+                    mudarEstiloParagrafo6()
+                </script>
+            </article>
+            <article>
+                <h2>Mudando estilo de um elemento através de uma função com um botão</h2>
+                <p id="exemplo-7">Quinta parágrafo.</p>
+                <button type="button" onclick="mudarEstiloParagrafo7()">Estilizar</button>
+                <script>
+                    function mudarEstiloParagrafo7() {
+                        document.getElementById("exemplo-7").style.backgroundColor = "orange";
+                        document.getElementById("exemplo-7").style.color = "purple";
+                        document.getElementById("exemplo-7").style.width = "100px";
+                        document.getElementById("exemplo-7").style.height = "100px";
+                    }
+                </script>
+            </article>
+            <article>
+                <h2>Usando JavaScript externo (arquivo separado do HTML)</h2>
+                <p id="exemplo-8">Sexto parágrafo</p>
+                <script src="script.js"></script>
+            </article>
+            <article>
+                <h2>Prática</h2>
+                <ul id="ul">
+                    <li id="li1">Item 1</li>
+                    <li id="li2">Item 2</li>
+                    <li id="li3">Item 3</li>
+                </ul>
+                <button type="button" onclick="estilizarLi1()">Estilizar li 1</button>
+                <button type="button" onclick="estilizarLi2()">Estilizar li 2</button>
+                <button type="button" onclick="estilizarLi3()">Estilizar li 3</button>
+                <script>
+                    document.getElementById("ul").style.listStyle = "none";
+                    document.getElementById("ul").style.color = "gold";
+                    document.getElementById("ul").style.fontWeight = "bold";
+                    document.getElementById("ul").style.padding = "0";
+                    function estilizarLi1() {
+                        document.getElementById("li1").style.textAlign = "center";
+                        document.getElementById("li1").style.backgroundColor = "red";
+                    }
+                    function estilizarLi2() {
+                        document.getElementById("li2").style.textAlign = "center";
+                        document.getElementById("li2").style.backgroundColor = "green";
+                    }
+                    function estilizarLi3() {
+                        document.getElementById("li3").style.textAlign = "center";
+                        document.getElementById("li3").style.backgroundColor = "blue";
+                    }
+                </script>
+                <style>
+                    /* #ul { 
+                        list-style: none; 
+                        color: white; 
+                        font-weight: bold; padding: 0; 
+                    } */
+                    /* #li1, #li2, #li3 { text-align: center; }
+                    #li1 { background-color: red; }
+                    #li2 { background-color: green; }
+                    #li3 { background-color: blue; } */
+                </style>
+            </article>
+            <article>
+                <h2>Usando document.write()</h2>
+                <script>
+                    document.write("Teste 1...");
+                </script>
+                <p>Parágrafo</p>
+                <script>
+                    document.write("Teste 2...");
+                </script>
+            </article>
+            <article>
+                <h2>document.write() deve ser usado somente para teste</h2>
+                <p>Se o doucmnet.write() for usado depois que página já estiver carregada, todo o conteúdo HTML da mesma é removido e somente o que foi passado como valor entre os parentesis ficará na página.</p>
+                <button type="button" onclick="document.write('Deu ruim...')">NÃO CLIQUE</button>
+            </article>
+            <article>
+                <h2>Usando window.alert para mostrar mensagem</h2>
+                <button type="button" onclick="window.alert('Mensagem de teste')">Mostrar mensagem</button>
+                <button type="button" onclick="alert('Mensagem de teste 3')">Mostrar mensagem</button>
+                <!-- <script>
+                    window.alert("Mensagem de teste 2.");
+                </script> -->
+            </article>
+            <article>
+                <h2>Usando concole.log para mostrar mensagens</h2>
+                <p>Mensagens usando console.log não aparecem na página, mas ficam visiveis no console do navegador, acessível através das opções de desenvolvedor (botão direito > inspecionar elemento).</p>
+                <script>
+                    console.log("Mensagem via console.log().");
+                </script>
+            </article>
+            <article>
+                <h2>Imprimir página</h2>
+                <p>A funçãp print pode ser usada para imprimir a página.</p>
+                <button type="button" onclick="window.print()">Imprimir</button>
+                <button type="button" onclick="print()">Imprimir</button>
+            </article>
+        </section>
+    </body>
+</html>
