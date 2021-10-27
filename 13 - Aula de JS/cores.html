@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cores com RGB</title>
+        <style>
+            body {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;                
+                width: 100%;
+            }
+
+            main {
+                width: 600px;
+                margin: auto;
+            }
+
+            main #mostrador-cor {
+                width: 300px;
+                height: 60px;
+                border: 1px solid black;
+                margin: auto;
+            }
+
+            main #mostrador-rgb {
+                width: 300px;
+                height: 30px;
+                border: 1px solid black;
+                margin: auto;
+                border-top: none;
+                line-height: 30px;
+                text-align: center;
+            }
+
+            section {
+                display: flex;
+                justify-content: space-evenly;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Cores com RGB</h1>
+        <main>
+            <p id="mostrador-cor"></p><!-- mostrador de cor -->
+            <p id="mostrador-rgb">rgb(255, 255, 255)</p><!-- mostrador de código RGB -->
+            <section>
+                <article>
+                    <h2>red</h2>
+                    <button type="button" onclick="menosRed()">-</button>
+                    <button type="button" onclick="maisRed()">+</button>
+                    <p id="v-red">255</p>
+                </article>
+                <article>
+                    <h2>green</h2>
+                    <button type="button" onclick="menosGreen()">-</button>
+                    <button type="button" onclick="maisGreen()">+</button>
+                    <p id="v-green">255</p>
+                </article>
+                <article>
+                    <h2>blue</h2>
+                    <button type="button" onclick="menosBlue()">-</button>
+                    <button type="button" onclick="maisBlue()">+</button>
+                    <p id="v-blue">255</p>
+                </article>
+            </section>
+        </main>
+        <script>
+            let red = 255;
+            let green = 255;
+            let blue = 255;
+
+            function menosRed() {
+                red -= 1; //console.log(red)
+                atualizaTela();
+            }
+            function maisRed() {
+                red += 1; //console.log(red)
+                atualizaTela();
+            }
+            function menosGreen() {
+                green -= 1; //console.log(green)
+                atualizaTela();
+            }
+            function maisGreen() {
+                green += 1; //console.log(green)
+                atualizaTela();
+            }
+            function menosBlue() {
+                blue -= 1; //console.log(blue)
+                atualizaTela();
+            }
+            function maisBlue() {
+                blue += 1; //console.log(blue)
+                atualizaTela();
+            }
+            function atualizaTela() {
+                // console.log("atualizaTela foi chamada...")
+                // Atualizar valor do red
+                document.getElementById("v-red").innerHTML = red;
+                // Atualizar valor do green
+                document.getElementById("v-green").innerHTML = green;
+                // Atualizar valor do blue
+                document.getElementById("v-blue").innerHTML = blue;
+                // Atualizar mostrador do RGB
+                document.getElementById("mostrador-rgb").innerHTML = "rgb(" + red + ", " + green + ", " + blue  + ")";
+                // Atualizar mostrador de cor
+                document.getElementById("mostrador-cor").style.backgroundColor = "rgb(" + red + ", " + green + ", " + blue  + ")";
+            }
+        </script>
+    </body>
+</html>

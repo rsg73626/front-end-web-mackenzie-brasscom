@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Operadores JavaScript</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            article {
+                margin: 5px;
+                padding: 5px;
+                border: 3px solid seagreen;
+            }
+
+            #rs-operadores-arit li {
+                margin: 5px 0;
+            }
+
+            .b {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Operadores JavaScript</h1>
+        <section>
+            <article>
+                <h2>Operadores aritiméticos</h2>
+                <ul id="rs-operadores-arit">
+                    <li> 10 + 10 = <span id="r1"></span> (adição)</li>
+                    <li> 10 - 10 = <span id="r2"></span> (subtração)</li>
+                    <li> 10 * 10 = <span id="r3"></span> (multiplicação)</li>
+                    <li> 10 / 10 = <span id="r4"></span> (divisão)</li>
+                    <li> 10 % 10 = <span id="r5"></span> (resto de divisão)</li>
+                    <li> 15 % 10 = <span id="r11"></span> (resto de divisão)</li>
+                    <li> 10 ** 10 = <span id="r6"></span> (exponenciação)</li>
+                    <li> variavel++ = <span id="r7"></span> (incremento)</li>
+                    <li> variavel-- = <span id="r8"></span> (decremento)</li>
+                    <li> ++variavel = <span id="r9"></span> (incremento)</li>
+                    <li> --variavel = <span id="r10"></span> (decremento)</li>
+                </ul>
+                <script>
+                    let numero = 10;
+                    numero++;
+
+                    let numero2 = 10
+                    numero2--;
+
+                    let numero3 = 10, numero4 = 10;
+
+                    document.getElementById("r1").innerHTML = 10 + 10;
+                    document.getElementById("r2").innerHTML = 10 - 10;
+                    document.getElementById("r3").innerHTML = 10 * 10;
+                    document.getElementById("r4").innerHTML = 10 / 10;
+                    document.getElementById("r5").innerHTML = 10 % 10;
+                    document.getElementById("r6").innerHTML = 10 ** 10;
+                    document.getElementById("r7").innerHTML = numero;
+                    document.getElementById("r8").innerHTML = numero2;
+                    document.getElementById("r9").innerHTML = ++numero3;
+                    document.getElementById("r10").innerHTML = --numero4;
+                    document.getElementById("r11").innerHTML = 15 % 10;
+                </script>
+            </article>
+            <article>
+                <h2>Operadores de atribuição</h2>
+                <p><span class="b">x</span> = 0</p>
+                <p><span class="b">y</span> = 10</p>
+                <ol>
+                    <li>x = y (x: <span id="at-r1"></span>)</li>
+                    <li>x += y (x: <span id="at-r2"></span>)</li>
+                    <li>x -= y (x: <span id="at-r3"></span>)</li>
+                    <li>x *= y (x: <span id="at-r4"></span>)</li>
+                    <li>x /= y (x: <span id="at-r5"></span>)</li>
+                    <li>x %= y (x: <span id="at-r6"></span>)</li>
+                    <li>x **= y (x: <span id="at-r7"></span>)</li>
+                </ol>
+                <script>
+                    let x = 0, y = 10;
+
+                    x = y;
+                    document.getElementById("at-r1").innerHTML = x;
+
+                    x += y;
+                    document.getElementById("at-r2").innerHTML = x;
+
+                    x -= y;
+                    document.getElementById("at-r3").innerHTML = x;
+
+                    x *= y;
+                    document.getElementById("at-r4").innerHTML = x;
+
+                    x /= y;
+                    document.getElementById("at-r5").innerHTML = x;
+
+                    x %= y;
+                    document.getElementById("at-r6").innerHTML = x;
+
+                    x **= y;
+                    document.getElementById("at-r7").innerHTML = x;
+                </script>
+            </article>
+            <article>
+                <h2>Concatenação de strings</h2>
+                <script>
+                    let texto = "Menu nome é ";
+                    texto += "Renan<br>";
+                    document.write(texto);
+                    document.write("Menu nome é " + "Renan")
+                </script>
+            </article>
+        </section>
+    </body>
+</html>

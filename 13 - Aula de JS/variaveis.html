@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Variáveis JS</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            article {
+                margin: 5px;
+                padding: 5px;
+                border: 3px solid seagreen;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Variáveis JS</h1>
+        <p>Em JavaScript há três palavras reservadas para a criação de variáveis (containers para armazenamento de dados):</p>
+        <ul>
+            <li>var</li>
+            <li>let</li>
+            <li>const</li>
+        </ul>
+        <section>
+            <article>
+                <h2>Exemplo de uso do var</h2>
+                <script>
+                    var nomeDaVariavel;
+                    var variavelInicializada = 100; /* variável numérica (inteiro) */
+                    var variavelInicializada2 = 10.10; // variável numérica (decimal)
+                    var variavelInicializada3 = "texto"; // variável com texto (string)
+
+                    nomeDaVariavel = variavelInicializada + variavelInicializada2;
+
+                    document.write("nomeDaVariavel: " + nomeDaVariavel + ".<br>");
+                    document.write("variavelInicializada: " + variavelInicializada + ".<br>");
+                    document.write("variavelInicializada2: " + variavelInicializada2 + ".<br>");
+                    document.write("variavelInicializada3: " + variavelInicializada3 + ".<br>");
+
+                    var _variavelComUnderline = "variável com underline";
+                    var $variavelComDolar = "variável com dólar";
+                    var nome_nome_nome = "outra variável";
+                    var nome$nome$nome = "outra variável com nome válido";
+                    var _$nome$_$nome_$ = "outro exemplo de nome correto";
+                </script>
+            </article>
+            <article>
+                <h2>Mudando conteúdo da página usando variáveis</h2>
+                <h3>Lista de tarefas</h3>
+                <ol>
+                    <li id="tarefa1"></li>
+                    <li id="tarefa2"></li>
+                    <li id="tarefa3"></li>
+                </ol>
+                <script>
+                    var tarefa1;
+                    var tarefa2;
+                    var tarefa3;
+
+                    tarefa1 = "Estudar HTML";
+                    tarefa2 = "Estudar CSS";
+                    tarefa3 = "Estudar JS";
+
+                    document.getElementById("tarefa1").innerHTML = tarefa1;
+                    document.getElementById("tarefa2").innerHTML = tarefa2;
+                    document.getElementById("tarefa3").innerHTML = tarefa3;
+                </script>
+            </article>
+            <article>
+                <h2>Testando valor indefinido</h2>
+                <script>
+                    var minhaVariavelNaoInicializada; // variável com valor indefinido (undefined).
+                    document.write("minhaVariavelNaoInicializada: " + minhaVariavelNaoInicializada + ".<br>")
+                </script>
+            </article>
+            <article>
+                <h2>var x let x const</h2>
+                <h3>var</h3>
+                <ul>
+                    <li>O escopo das variáveis é global.</li>
+                    <li>Variáveis criadas dentro de um bloco podem ser acessadas fora desse bloco.</li>
+                    <li>Variáveis podem ser redeclaradas.</li>
+                    <li>Variáveis podem ser usadas antes de serem declaradas.</li>
+                </ul>
+                <h3>let</h3>
+                <ul>
+                    <li>O escopo das variáveis é em bloco.</li>
+                    <li>Variáveis criadas dentro de um bloco não podem ser acessadas fora desse bloco.</li>
+                    <li>Variáveis não podem ser redeclaradas no mesmo escopo.</li>
+                    <li>Variáveis não podem ser usadas antes de serem declaradas.</li>
+                </ul>
+                <h3>const</h3>
+                <ul>
+                    <li>Possui as mesmas características do uso do let, com duas adições.</li>
+                    <li>Ao ser declarado, as constantes precisam de um valor (não é permitido declarar a constande e DEPOIS atributior valor).</li>
+                    <li>Não é permitido mudar o valor das constantes.</li>
+                </ul>
+                <h2>Regra guida</h2>
+                <strong>Para definir se deve usar var/let ou const pergunte-se se o valor da variável vai mudar ao longo do programa. Se sim, use var ou let. Se não use const (ou seja, crie uma constantes).</strong>
+            </article>
+        </section>
+    </body>
+</html>
