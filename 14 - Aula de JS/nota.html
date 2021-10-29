@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Nota</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            input {
+                width: 150px;
+                height: 30px;
+            }
+
+            #resultado, #conceito {
+                font-size: 20px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Nota</h1>
+        <h2>Regras de conceito</h2>
+        <ol>
+            <li>Se a média for menor que 5, reprovado.</li>
+            <li>Se a média for menor ou igual à 7, recuperação.</li>
+            <li>Se a média for maior ou igual à 8, aprovado.</li>
+        </ol>
+        <form>
+            <label>
+                Nota 1:
+                <input type="number" min="0" max="10" step="0.1" placeholder="entre com a nota 1" id="n1">
+            </label><br><br>
+            <label>
+                Nota 2:
+                <input type="number" min="0" max="10" step="0.1" placeholder="entre com a nota 2" id="n2">
+            </label><br><br>
+            <label>
+                Nota 3:
+                <input type="number" min="0" max="10" step="0.1" placeholder="entre com a nota 3" id="n3">
+            </label><br><br>
+            <button type="button" onclick="calcularMedia()">Calcular média</button>
+        </form>
+        <p>A sua média é: <span id="resultado"></span></p>
+        <p>O seu conceito é: <span id="conceito"></span></p>
+        <script>
+            function calcularMedia() {
+                const input1 = document.getElementById("n1"); // Pegando primeiro input
+                const input2 = document.getElementById("n2"); // Pegando segundo input
+                const input3 = document.getElementById("n3"); // Pegando terceiro input
+
+                const n1 = Number(input1.value); // Pegando valor do primeiro input.
+                const n2 = Number(input2.value); // Pegando valor do segundo input.
+                const n3 = Number(input3.value); // Pegando valor do terceiro input.
+
+                // console.log(n1); console.log(n2); console.log(n3);
+                // console.log(typeof n1); console.log(typeof n2); console.log(typeof n3); 
+
+                // if (n1 != 0 && n2 != 0 && n3 != 0) {
+                //     const media = (n1 + n2 + n3)/3;
+                //     document.getElementById("resultado").innerHTML = media + ".";
+                // } else {
+                //     window.alert("Insira suas notas nos inputs (se todas elas forem realmente zero, a sua média é zero).")
+                // }
+
+                if (n1 == 0 && n2 == 0 && n3 == 0) {
+                    window.alert("Insira suas notas nos inputs (se todas elas forem realmente zero, a sua média é zero).")
+                } else {
+                    const media = (n1 + n2 + n3)/3;
+                    document.getElementById("resultado").innerHTML = media + ".";
+                    let conceito;
+                    if (media < 5) {
+                        conceito = "Reprovado";
+                    } else if (media <= 7) {
+                        conceito = "Recueração";
+                    } else {
+                        conceito = "Aprovado";
+                    }
+                    document.getElementById("conceito").innerHTML = conceito + ".";
+                }
+
+            }
+        </script>
+        <!-- Mude a cor do span da nota e do span do conceito de acordo com o conceito do usuário (se reprovado, vermelho; se em recuperação, laranja; se aprovado, verde). -->
+        <!-- Adicione um novo campo para que a média seja calculada usando 4 notas ao invés de 3. -->
+        <!-- Adicione um novo campo que permita o usuário informar a sua frequência (presença nas aulas). Pode ser um valor de 0 à 100, representando a proncentagem de participação nas aulas. -->
+        <!-- Altere a regra de definição do conceito para que leve em consideração a frequência do usuário que foi informada. -->
+        <!-- DESAFIO -->
+        <!-- Mude a média para ser uma média ponderada. Para isso, novos campos serão necessários (um campo para informar o peso de cada uma das notas). O cálculo da média também será afetado. -->
+        <!-- Referência sobre média ponderada: https://brasilescola.uol.com.br/matematica/media-ponderada.htm -->
+    </body>
+</html>

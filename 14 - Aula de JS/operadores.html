@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Operadores</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            article {
+                margin: 5px;
+                padding: 5px;
+                border: 3px solid seagreen;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Operadores</h1>
+        <section>
+            <article>
+                <h2>Tipo Booleano</h2>
+                <p>O tipo booleano permite-nos usar dois valores, true e false (verdadeiro e falso).</p>
+                <script>
+                    let minhaPrimeiraVariavelBooleana = true;
+                    if (minhaPrimeiraVariavelBooleana) {
+                        document.write("Variável booleana com valor true! (1)");
+                    }
+
+                    let minhaSegundaVariavelBooleana = false;
+                    if (minhaSegundaVariavelBooleana) {
+                        document.write("Variável booleana com valor true! (2)");
+                    }
+                </script>
+            </article>
+            <article>
+                <h2>Operadores de comparação (ou opradores relacionadis)</h2>
+                <h3>Usando operador == (verifica se dois valores são iguais)</h3>
+                <script>
+                    if (10 == 10) {
+                        document.write("10 == 10<br>");
+                    }
+                </script>
+                <h3>Usando operador === (verifica se dois valores são iguais e do mesmo tipo)</h3>
+                <script>
+                    if (10 === 10.0) {
+                        document.write("10 === 10.0<br>");
+                    }
+                </script>
+                <h3>Usando operadores !=, !==</h3>
+                <script>
+                    if (10 != 20) {
+                        document.write("10 != 20<br>");
+                    }
+                    if (10 !== 20) {
+                        document.write("10 !== 20<br>");
+                    }
+                </script>
+                <h3>Usando >, >=, &lt; e &lt;=</h3>
+                <script>
+                    if (10 > 5) { document.write("10 > 5<br>"); }
+                    if (10 >= 10) { document.write("10 >= 10<br>"); }
+                    if (10 < 50) { document.write("10 < 50<br>"); }
+                    if (10 <= 10) { document.write("10 <= 10<br>"); }
+                </script>
+            </article>
+            <article>
+                <h2>Usando operador ternário</h2>
+                <p>O operador ternário permite atribuir um valor condicional sem que para isso seja necessário usar uma estrutura if/else.</p>
+                <script>
+                    let mediaDeNotas = 5;
+                    let resultado; // Variavel que vai conter o resultado (Aprovado ou Reprovado)
+                    // Se a média for maior ou igual à 7, retorna Aprovado
+                    // Se não, retorna Reprovado
+                    // if (mediaDeNotas >= 7) {
+                    //     resultado = "Aprovado";
+                    // } else {
+                    //     resultado = "Reprovado";
+                    // }
+                    resultado = mediaDeNotas >= 7 ? "Aprovado" : "Reprovado";
+                    document.write(resultado + "<br>");
+                </script>
+            </article>
+            <article>
+                <h2>Usando operador ternário 2</h2>
+                <script>
+                    let media = 4;
+                    let aprovacao;
+                    // Se a média for menor que 5, reprovado.
+                    // Se a média for menor ou igual à 7, recuperação.
+                    // Se a média for maior ou igual à 8, aprovado.
+
+                    // if (media < 5) {
+                    //     aprovacao = "Reprovado";
+                    // } else {
+                    //     if (media <= 7) {
+                    //         aprovacao = "Recuperação";
+                    //     } else {
+                    //         aprovacao = "Aprovado";
+                    //     }
+                    // }
+
+                    // if (media < 5) {
+
+                    // } else if (media <= 7) {
+
+                    // } else {
+
+                    // }
+
+                    aprovacao = media < 5 ? "Reprovado" : media <= 7 ? "Recuperação" : "Aprovado";
+                    document.write("Média: " + media + ". Aprovação: " + aprovacao + ".<br>");
+                </script>
+            </article>
+            <article>
+                <h2>Operadores lógicos (E, OU, NÃO)</h2>
+                <h3>Usando operador E</h3>
+                <script>
+                    let nota = 8;
+                    let presenca = 70;
+                    let conceito = "Ruim";
+                    // Se nota for maior ou igual a 8 e presença for maior ou igual a 80%, Ótimo
+                    if (nota >= 8 && presenca >= 80) {
+                        conceito = "Ótimo";
+                    }
+                    document.write("Nota: " + nota + ". Presença: " + presenca + "%. Conceito: " + conceito + ".<br>");
+                </script>
+                <h3>Usando operador OU</h3>
+                <script>
+                    nota = 8;
+                    presenca = 0;
+                    // Se nota for maior ou igual a 8 ou a presença for maior ou igual a 80%, Ótimo
+                    if (nota >= 8 || presenca >= 80) {
+                        conceito = "Ótimo";
+                    }
+                    document.write("Nota: " + nota + ". Presença: " + presenca + "%. Conceito: " + conceito + ".<br>");
+                </script>
+                <h3>Usando operador NÃO</h3>
+                <script>
+                    let teveAdvertencia = false;
+                    let comportamento = "Ruim";
+                    if (!teveAdvertencia) {
+                        comportamento = "Bom";
+                    }
+                    document.write("Teve advertência: " + teveAdvertencia + ". Comportamento: " + comportamento + ".<br>");
+                </script>
+            </article>
+            <article>
+                <h2>Operador typeof</h2>
+                <script>
+                    let numero = 10;
+                    let texto = "texto";
+                    let booleana = true;
+                    document.write(numero + " é do tipo " + typeof numero + "<br>");
+                    document.write(texto + " é do tipo " + typeof texto + "<br>");
+                    document.write(booleana + " é do tipo " + typeof booleana + "<br>");
+                </script>
+            </article>
+        </section>
+    </body>
+</html>

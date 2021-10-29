@@ -69,12 +69,16 @@
             let blue = 255;
 
             function menosRed() {
-                red -= 1; //console.log(red)
-                atualizaTela();
+                if (red > 0) {
+                    red -= 5; //console.log(red)
+                    atualizaTela();
+                }
             }
             function maisRed() {
-                red += 1; //console.log(red)
-                atualizaTela();
+                if (red < 255) {
+                    red += 5; //console.log(red)
+                    atualizaTela();
+                }
             }
             function menosGreen() {
                 green -= 1; //console.log(green)
