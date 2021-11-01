@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Funções</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            article {
+                margin: 5px;
+                padding: 5px;
+                border: 3px solid seagreen;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Funções em JavaScript</h1>
+        <p>Funções são blocos de código nomeados com instruções JavaScript que são executadas sempre que a função é chamada, através de seu nome, em qualquer lugar do código.</p>
+        <p>A principal vantagem de se usar funções é evitar a duplicidade de código, o que reduz o nosso trabalho e facilita futuras manutenções necessárias (como correção de erros, por exemplo).</p>
+        <p>Funções podem possuir valores de entrada ou não. Os valores de entrada são chamados de parâmetros.</p>
+        <p>Funções podem retornar algum valor para quem as chamou ou não.</p>
+        <section>
+
+            <article>
+                <h2>Funções sem retorno</h2>
+                <p>Funções sem retorno executam alguma ação (instruções JavaScript) e não retornam valor.</p>
+                <p>Fnções sem retorno também são chamadas de métodos.</p>
+                <p id="r1"></p>
+                <script>
+                    function funcaoSemRetorno() {
+                        document.getElementById("r1").innerHTML = "Executou a função 'funcaoSemRetorno()'.";
+                    }
+                </script>
+                <button type="button" onclick="funcaoSemRetorno()">Executar JS</button>
+            </article>
+
+            <article>
+                <h2>Funções com retorno</h2>
+                <p>Funções com retorno executam alguma ação (instruções JavaScript) e retornam algum valor.</p>
+                <p>Funções podem retornar diferentes tipos de valores (número, string, boleanos, entre outros).</p>
+                <p>O valor retornado por uma função pode ser atribuído à uma variável, ou até mesmo sido usado como parâmetro para outra função (um exemplo é dado a seguir).</p>
+                <p id="r2"></p>
+                <p id="r3"></p>
+                <p id="r4"></p>
+                <script>
+                    function funcaoRetornandoNumero() {
+                        // outras instruções...
+                        return 10;
+                        // instruções colocadas depois do return não são executadas
+                    }
+                    function funcaoRetornandoTexto() {
+                        return "Texto";
+                    }
+                    function funcaoRetornandoBooleano() {
+                        return true;
+                    }
+                    function numeroClick() {
+                        let conteudo = funcaoRetornandoNumero();
+                        document.getElementById("r2").innerHTML = conteudo;
+                    }
+                    function textoClick() {
+                        let conteudo = funcaoRetornandoTexto();
+                        document.getElementById("r3").innerHTML = conteudo;
+                    }
+                    function booleanClick() {
+                        let conteudo = funcaoRetornandoBooleano();
+                        document.getElementById("r4").innerHTML = conteudo;
+                    }
+                </script>
+                <button type="button" onclick="numeroClick()">Número</button>
+                <button type="button" onclick="textoClick()">Texto</button>
+                <button type="button" onclick="booleanClick()">Booleano</button>
+            </article>
+
+            <article>
+                <h2>Funções sem parâmetro(s)</h2>
+                <p>Funções sem parâmetro(s) não permitem que quem as chama passe algum valor para elas.</p>
+                <p>Todas as funções criadas até aqui são funções sem passagem de parâmetro.</p>
+            </article>
+
+            <article>
+                <h2>Funções com parâmetro(s)</h2>
+                <p>Funções com parâmetro(s) permitem que quem as chama passe algum valor para elas.</p>
+                <p>Funções podem ter um ou mais parâmetros.</p>
+                <p>Os parâmetros podem ser entendidos como valores de entrada para a execução de um programa (<span style="font-weight: bold;">entrada</span>, processamento, saída).</p>
+                <p>Os parâmetros podem ser de diferentes tipos.</p>
+                <p id="r5"></p>
+                <p id="r6"></p>
+                <p id="r7"></p>
+                <p id="r8"></p>
+                <p id="r9"></p>
+                <p id="r10"></p>
+                <p id="r11"></p>
+                <script>
+                    function funcaoComUmParametro(param1) {
+                        let conteudo = "funcComUmParametro chamada com o valor " + param1 + ".";
+                        return conteudo
+                    }
+                    function funcaoComDoisParametros(param1, param2) {
+                        let conteudo = "funcaoComDoisParametros chamada com os valores " + param1 + ", " + param2 + ".";
+                        return conteudo
+                    }
+                    function func1Param() {
+                        document.getElementById("r5").innerHTML = funcaoComUmParametro("Valor");
+                        document.getElementById("r6").innerHTML = funcaoComUmParametro(10);
+                        document.getElementById("r7").innerHTML = funcaoComUmParametro(true);
+                    }
+                    function func2Params() {
+                        document.getElementById("r8").innerHTML = funcaoComDoisParametros("Param 1", "Param 2");
+                        document.getElementById("r9").innerHTML = funcaoComDoisParametros(10, 20);
+                        document.getElementById("r10").innerHTML = funcaoComDoisParametros(true, false);
+                        document.getElementById("r11").innerHTML = funcaoComDoisParametros("true", 20);
+                    }
+                </script>
+                <button type="button" onclick="func1Param()">1 Parâmetro</button>
+                <button type="button" onclick="func2Params()">2 Parâmetros</button>
+            </article>
+
+            <article>
+                <h2>Funções com parâmetro(s) e com retorno</h2>
+                <p>São funções que permitem a passagem de valores para a execução de suas instruções JavaScript e irão retornar algum valor.</p>
+            </article>
+
+            <article>
+                <h2>Exemplo prático</h2>
+
+                <p id="display">Branco</p>
+                <button type="button" onclick="didClickButton('red', 'Vermelho')">Vermelho</button>
+                <button type="button" onclick="didClickButton('green', 'Verde')">Verde</button>
+                <button type="button" onclick="didClickButton('blue', 'Azul')">Azul</button>
+                <button type="button" onclick="didClickButton('orange', 'Laranja')">Laranja</button>
+                <button type="button" onclick="didClickButton('purple', 'Roxo')">Roxo</button>
+                <button type="button" onclick="didClickButton('yellow', 'Amarelo')">Amarelo</button>
+                <button type="button" onclick="didClickButton('white', 'Branco')">Branco</button>
+                <script>
+                    function createCSSBackgroundColorConfiguration(color) {
+                        return "background-color: " + color + ";";
+                    }
+                    function didClickButton(color, name) {
+                        const display = document.getElementById("display");
+                        display.innerHTML = name;
+                        display.setAttribute("style", createCSSBackgroundColorConfiguration(color));
+                    }
+                </script>
+            </article>
+
+            <article>
+                <h2>Evento onmouseover</h2>
+                <p onmouseover="passouOMouseNoParagrafo()">Passe o mouse em cima de mim.</p>
+                <script>
+                    function passouOMouseNoParagrafo() {
+                        alert("Passou o mouse no parágrafo!")
+                    }
+                </script>
+            </article>
+        </section>
+    </body>
+</html>
