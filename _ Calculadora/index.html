@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculadora</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            html {
+                width: 100%;
+                background-color: white;
+            }
+            body {
+                background-color: gold;
+                width: 600px;
+                margin: auto;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                padding: 32px 16px;
+            }
+            h1, aside h2 {
+                margin: 32px;
+                text-align: center;
+            }
+            ol {
+                padding-left: 14px;
+            }
+            ol li {
+                padding: 5px;
+                text-align: justify;;
+            }
+            #calculadora {
+                width: 240px;
+                height: 348px;
+                margin: auto;
+                border: 1px solid black;
+                background-color: royalblue;
+
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+            #calculadora #resultado {
+                width: calc(100% - 16px - 10px);
+                height: 50px;
+                margin: auto;
+                line-height: 50px;
+                text-align: right;
+                padding: 0 5px;
+                border: 1px solid black;
+                background-color:lightgray;
+            }
+            #calculadora button {
+                width: 50px;
+                height: 50px;
+                font-size: 18px;
+                line-height: 50px;
+                font-weight: bold;
+            }
+            input {
+                width: 20px;
+                height: 20px;
+                margin: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Calculadora</h1>
+        <main id="calculadora">
+            <h2 id="resultado">0</h2>
+            <!-- Primeira linha -->
+            <button type="button">1</button>
+            <button type="button">2</button>
+            <button type="button">3</button>
+            <button type="button">+</button>
+            <!-- Segunda linha -->
+            <button type="button">4</button>
+            <button type="button">5</button>
+            <button type="button">6</button>
+            <button type="button">-</button>
+            <!-- Tercerira linha -->
+            <button type="button">7</button>
+            <button type="button">8</button>
+            <button type="button">9</button>
+            <button type="button">x</button>
+            <!-- Quarta linha -->
+            <button type="button">.</button>
+            <button type="button" style="width: 108px;">0</button>
+            <button type="button">/</button>
+            <!-- Quinta linha -->
+            <button type="button">C</button>
+            <button type="button" style="width: 166px;">=</button>
+        </main>
+        <aside>
+            <form>
+                <h2>Regras para implementação da calculadora usando JavaScript</h2>
+                <ol>
+                    <li><input type="checkbox">Crie uma função que receba um parâmetro.</li>
+                    <li><input type="checkbox">Associe a função criada aos eventos de clique dos botões da calculadora, com cada botão passando o respectivo valor que foi escolhido pelo usuário como valor do argumento da função.</li>
+                    <li><input type="checkbox">Crie três variáveis. (1) Uma para armazenar o primeiro valor digitado, (2) outra para armazenar a operação escolhida e (3) outra para armazenar o segundo valor digitado.</li>
+                    <li><input type="checkbox">Ao abrir a página, enquanto o usuário estiver digitando, os valores devem ser concatenados ao fim do valor da primeira variável.</li>
+                    <li><input type="checkbox">Enquanto o usuário estiver digitando, o visor deve ser atualizado com o número que está sendo 'construindo'.</li>
+                    <li><input type="checkbox">Pode-se definir um limite de caracteres que o usuário pode entrar por vez, de modo que, caso esse limite seja atingido, os outros número digitados são ignorados.</li>
+                    <li><input type="checkbox">Ao clicar em uma das operações, o valor escolhido deve ser armazenado na variável (2) criada anteriormente para armazenar a operação escolhida. Desse momento em diante, os novos digitos inseridos serão armazenados na variável (3) que armazena o segundo valor digitado.</li>
+                    <li><input type="checkbox">Nesse momento, enquanto o usuário estiver digitando, os valores devem ser concatenados ao fim do valor da terceira variável, e o visor deve ser atualizado com o número que está sendo 'construindo'.</li>
+                    <li><input type="checkbox">Nesse momento, ao clicar no botão de igual, o cálculo deve ser realizado e o resultado mostrado no visor.</li>
+                </ol>
+                <h2>Outras regras sempre válidas</h2>
+                <ol>
+                    <li><input type="checkbox">Quando estiver 'construindo' o primeiro ou o segundo valor, o usuário só pode digitar "." (ponto) uma única vez (lembre-se, o ponto serve para que seja possível criar um número decimal, desse modo não faz sentido permitir inserir mais de um ponto no número). Caso ele digite mais de uma vez, o valor da segunda vez em diante pode ser ignorado. (é possível controlar isso através de uma variável booleana; algo como "jaDigitouPonto", que inicialmente será false e assim que o usuário clicar no botão de ponto ela se torna verdadeira; atenção: após começar a digitar um novo valor, essa variável booleana deve voltar a ser false novamente).</li>
+                    <li><input type="checkbox">Ao clicar no botão de resete ("C"), em qualquer momento da utilização da calculadora, a mesma deve ser resetada (todas as variáveis envolvidas no programa devem voltar ao seu estado inicial e o visor da calculadora deve voltar a mostrar zero).</li>
+                    <li><input type="checkbox">Enquanto o usuário estiver digitando os valores, os mesmos estarão sendo armazenados nas duas variáveis criadas (uma variável para armazenar o primeiro valor, e outra para armazenar o segundo valor da operação) em forma de texto. Quando o usuário clicar no botão de igual, esses textos devem ser transformados em números para que seja possível fazer o cálculo de fato.</li>
+                    <li><input type="checkbox">Visto que não é possível dividir por zero, caso esse cenário ocorra, pode-se mostrar uma mensagem no visor da calculadora (algo como "Não é possível dividir por zero"). Caso esse cenário ocorra, a calculadora também pode ser resetada.</li>
+                </ol>
+            </form>
+        </aside>
+    </body>
+</html>
