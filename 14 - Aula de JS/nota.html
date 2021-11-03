@@ -9,11 +9,11 @@
             }
 
             input {
-                width: 150px;
+                width: 170px;
                 height: 30px;
             }
 
-            #resultado, #conceito {
+            #resultado, #conceito, #valor-freq {
                 font-size: 20px;
                 font-weight: bold;
             }
@@ -23,9 +23,9 @@
         <h1>Nota</h1>
         <h2>Regras de conceito</h2>
         <ol>
-            <li>Se a média for menor que 5, reprovado.</li>
-            <li>Se a média for menor ou igual à 7, recuperação.</li>
-            <li>Se a média for maior ou igual à 8, aprovado.</li>
+            <li>Se a média for menor que 5 ou a frequência for menor que 50%, reprovado.</li>
+            <li>Se a média for menor ou igual à 7 e a freqência for maior ou igual que 50%, recuperação.</li>
+            <li>Se a média for maior que 7 e a frequência for maior ou igual que 50%, aprovado.</li>
         </ol>
         <form>
             <label>
@@ -33,15 +33,40 @@
                 <input type="number" min="0" max="10" step="0.1" placeholder="entre com a nota 1" id="n1">
             </label><br><br>
             <label>
+                Peso da nota 1:
+                <input type="number" min="1" max="10" step="0.1" placeholder="peso da nota 1" id="p-n1" value="2.5">
+            </label><br><br>
+            <label>
                 Nota 2:
                 <input type="number" min="0" max="10" step="0.1" placeholder="entre com a nota 2" id="n2">
+            </label><br><br>
+            <label>
+                Peso da nota 2:
+                <input type="number" min="1" max="10" step="0.1" placeholder="peso da nota 2" id="p-n2" value="2.5">
             </label><br><br>
             <label>
                 Nota 3:
                 <input type="number" min="0" max="10" step="0.1" placeholder="entre com a nota 3" id="n3">
             </label><br><br>
+            <label>
+                Peso da nota 3:
+                <input type="number" min="1" max="10" step="0.1" placeholder="peso da nota 3" id="p-n3" value="2.5">
+            </label><br><br>
+            <label>
+                Nota 4:
+                <input type="number" min="0" max="10" step="0.1" placeholder="entre com a nota 4" id="n4">
+            </label><br><br>
+            <label>
+                Peso da nota 4:
+                <input type="number" min="1" max="10" step="0.1" placeholder="peso da nota 4" id="p-n4" value="2.5">
+            </label><br><br>
+            <label>
+                Frequência (%):
+                <input type="number" min="0" max="100" step="1" placeholder="entre com a frequência" id="freq">
+            </label><br><br>
             <button type="button" onclick="calcularMedia()">Calcular média</button>
         </form>
+        <p>A sua frequência é: <span id="valor-freq"></span></p>
         <p>A sua média é: <span id="resultado"></span></p>
         <p>O seu conceito é: <span id="conceito"></span></p>
         <script>
@@ -49,10 +74,22 @@
                 const input1 = document.getElementById("n1"); // Pegando primeiro input
                 const input2 = document.getElementById("n2"); // Pegando segundo input
                 const input3 = document.getElementById("n3"); // Pegando terceiro input
+                const input4 = document.getElementById("n4"); // Pegando quarto input
+                const inputFreq = document.getElementById("freq"); // Pegando input da frequência
+                const inputp1 = document.getElementById("p-n1");
+                const inputp2 = document.getElementById("p-n2");
+                const inputp3 = document.getElementById("p-n3");
+                const inputp4 = document.getElementById("p-n4");
 
                 const n1 = Number(input1.value); // Pegando valor do primeiro input.
                 const n2 = Number(input2.value); // Pegando valor do segundo input.
                 const n3 = Number(input3.value); // Pegando valor do terceiro input.
+                const n4 = Number(input4.value); // Pegando valor do quarto input.
+                const freq = Number(inputFreq.value); // Pegando valor do input da frequência.
+                const p1 = Number(inputp1.value); // Pegando valor do peso da nota 1.
+                const p2 = Number(inputp2.value); // Pegando valor do peso da nota 2.
+                const p3 = Number(inputp3.value); // Pegando valor do peso da nota 3.
+                const p4 = Number(inputp4.value); // Pegando valor do peso da nota 4.
 
                 // console.log(n1); console.log(n2); console.log(n3);
                 // console.log(typeof n1); console.log(typeof n2); console.log(typeof n3); 
@@ -64,30 +101,41 @@
                 //     window.alert("Insira suas notas nos inputs (se todas elas forem realmente zero, a sua média é zero).")
                 // }
 
-                if (n1 == 0 && n2 == 0 && n3 == 0) {
+                if (n1 == 0 && n2 == 0 && n3 == 0 && n4 == 0) {
                     window.alert("Insira suas notas nos inputs (se todas elas forem realmente zero, a sua média é zero).")
                 } else {
-                    const media = (n1 + n2 + n3)/3;
-                    document.getElementById("resultado").innerHTML = media + ".";
+                    // const media = (n1 + n2 + n3 + n4)/4; // média aritimética 
+                    const media = ((n1 * p1) + (n2 * p2) + (n3 * p3) + (n4 * p4))/(p1 + p2 + p3 + p4); // média ponderada
+                    const spanResultado = document.getElementById("resultado");
+                    const spanConceito = document.getElementById("conceito");
+                    const spanFreq = document.getElementById("valor-freq");
+                    spanResultado.innerHTML = media + ".";
+                    spanFreq.innerHTML = freq + ".";
                     let conceito;
-                    if (media < 5) {
+                    let cor;
+                    if (media < 5 || freq < 50) {
                         conceito = "Reprovado";
-                    } else if (media <= 7) {
-                        conceito = "Recueração";
-                    } else {
+                        cor = "red";
+                    } else if (media <= 7 && freq >= 50) {
+                        conceito = "Recuperação";
+                        cor = "orange";
+                    } else if (freq >= 50) { // média é maior do 7
                         conceito = "Aprovado";
+                        cor = "green";
                     }
-                    document.getElementById("conceito").innerHTML = conceito + ".";
+                    spanConceito.innerHTML = conceito + ".";
+                    spanResultado.style.color = cor;
+                    spanConceito.style.color = cor;
                 }
 
             }
         </script>
-        <!-- Mude a cor do span da nota e do span do conceito de acordo com o conceito do usuário (se reprovado, vermelho; se em recuperação, laranja; se aprovado, verde). -->
-        <!-- Adicione um novo campo para que a média seja calculada usando 4 notas ao invés de 3. -->
-        <!-- Adicione um novo campo que permita o usuário informar a sua frequência (presença nas aulas). Pode ser um valor de 0 à 100, representando a proncentagem de participação nas aulas. -->
-        <!-- Altere a regra de definição do conceito para que leve em consideração a frequência do usuário que foi informada. -->
-        <!-- DESAFIO -->
-        <!-- Mude a média para ser uma média ponderada. Para isso, novos campos serão necessários (um campo para informar o peso de cada uma das notas). O cálculo da média também será afetado. -->
-        <!-- Referência sobre média ponderada: https://brasilescola.uol.com.br/matematica/media-ponderada.htm -->
+        <!-- [FEITO] Mude a cor do span da nota e do span do conceito de acordo com o conceito do usuário (se reprovado, vermelho; se em recuperação, laranja; se aprovado, verde). -->
+        <!-- [FEITO] Adicione um novo campo para que a média seja calculada usando 4 notas ao invés de 3. -->
+        <!-- [FEITO] Adicione um novo campo que permita o usuário informar a sua frequência (presença nas aulas). Pode ser um valor de 0 à 100, representando a porcentagem de participação nas aulas. -->
+        <!-- [FEITO] Altere a regra de definição do conceito para que leve em consideração a frequência do usuário que foi informada. -->
+        <!-- [FEITO] DESAFIO -->
+        <!-- [FEITO] Mude a média para ser uma média ponderada. Para isso, novos campos serão necessários (um campo para informar o peso de cada uma das notas). O cálculo da média também será afetado. -->
+        <!-- [FEITO] Referência sobre média ponderada: https://brasilescola.uol.com.br/matematica/media-ponderada.htm -->
     </body>
 </html>
