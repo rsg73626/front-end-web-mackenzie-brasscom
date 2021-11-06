@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Arrays</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            article {
+                margin: 5px;
+                padding: 5px;
+                border: 3px solid seagreen;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Arrays em JavaScript</h1>
+        <section>
+            <article>
+                <h2>Criando um array com valores</h2>
+                <p id="r1"></p>
+                <p id="r2"></p>
+                <p id="r3"></p>
+                <script>
+                    const meuPrimeiroArray = ["Primeiro valor", "Segundo valor", "Terceiro valor"];
+                    const meuSegundoArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+                    const frutas = ["Maçã", "Banana", "Mamão", "Melancia"];
+
+                    document.getElementById("r1").innerHTML = meuPrimeiroArray;
+                    document.getElementById("r2").innerHTML = meuSegundoArray;
+                    document.getElementById("r3").innerHTML = frutas;
+                </script>
+            </article>
+            <article>
+                <h2>Criando um vazio e o montando</h2>
+                <p id="r4"></p>
+                <p id="r5"></p>
+                <p id="r6"></p>
+                <p id="r7"></p>
+                <script>
+                    const arrayVazio = [];
+                    document.getElementById("r4").innerHTML = "arrayVazio: " + arrayVazio;
+                    arrayVazio[0] = "Primeiro";
+                    document.getElementById("r5").innerHTML = "arrayVazio: " + arrayVazio;
+                    arrayVazio[1] = "Segundo";
+                    document.getElementById("r6").innerHTML = "arrayVazio: " + arrayVazio;
+                    arrayVazio[2] = "Terceiro";
+                    document.getElementById("r7").innerHTML = "arrayVazio: " + arrayVazio;
+                    arrayVazio[4] = "Quarto";
+                    console.log(arrayVazio)
+                </script>
+            </article>
+            <article>
+                <h2>Alterando valores de um array</h2>
+                <p id="r8"></p>
+                <p id="r9"></p>
+                <script>
+                    const animais = ["Cachorro", "Gato", "Peixe"];
+                    document.getElementById("r8").innerHTML = animais;
+                    animais[2] = "Elefante";
+                    document.getElementById("r9").innerHTML = animais;
+                </script>
+            </article>
+            <article>
+                <h2>Acessando valores do array</h2>
+                <p id="r10"></p>
+                <p id="r11"></p>
+                <p id="r12"></p>
+                <p id="r13"></p>
+                <script>
+                    const objetos = ["Cadeira", "Mesa", "Computador"];
+                    document.getElementById("r10").innerHTML = "objetos: " + objetos;
+                    document.getElementById("r11").innerHTML = "objetos[0]: " + objetos[0];
+                    document.getElementById("r12").innerHTML = "objetos[1]: " + objetos[1];
+                    document.getElementById("r13").innerHTML = "objetos[2]: " + objetos[2];
+                </script>
+            </article>
+            <article>
+                <h2>Erros comuns</h2>
+                <p>Verifique o console do navegador para ver o erro.</p>
+                <script>
+                    const paises = ["Brasil", "EUA", "Japão"];
+                    "abc".toUpperCase() // "ABC"
+                    "ABC".toLowerCase() // "abc"
+                    const pais = paises[3].toUpperCase();
+                    console.log(pais);
+                </script>
+            </article>
+            <article>
+                <h2>Diferentes tipos de valores</h2>
+                <p id="r14"></p>
+                <p id="r15"></p>
+                <p id="r16"></p>
+                <p id="r17"></p>
+                <p id="r18"></p>
+                <p id="r19"></p>
+                <script>
+                    const arrayDiferentao = ["Texto", 10, true, false, {}, []];
+                    document.getElementById("r14").innerHTML = "arrayDiferentao[0]: " + arrayDiferentao[0] + ". Type: " + (typeof arrayDiferentao[0]) + ".";
+                    document.getElementById("r15").innerHTML = "arrayDiferentao[1]: " + arrayDiferentao[1] + ". Type: " + (typeof arrayDiferentao[1]) + ".";
+                    document.getElementById("r16").innerHTML = "arrayDiferentao[2]: " + arrayDiferentao[2] + ". Type: " + (typeof arrayDiferentao[2]) + ".";
+                    document.getElementById("r17").innerHTML = "arrayDiferentao[3]: " + arrayDiferentao[3] + ". Type: " + (typeof arrayDiferentao[3]) + ".";
+                    document.getElementById("r18").innerHTML = "arrayDiferentao[4]: " + arrayDiferentao[4] + ". Type: " + (typeof arrayDiferentao[4]) + ".";
+                    document.getElementById("r19").innerHTML = "arrayDiferentao[5]: " + arrayDiferentao[5] + ". Type: " + (typeof arrayDiferentao[5]) + ".";
+                </script>
+                <p id="r20"></p>
+                <script>
+                    const matrix = [[1,2,3],[4,5,6],[7,8,9]];
+                    document.getElementById("r20").innerHTML = "Valor da segunda linha na segunda coluna da matrix: " + matrix[1][1] + ".";
+                </script>
+            </article>
+        </section>
+        <script>
+            // let x = "Valor da variavel X";
+            // console.log(x);
+            // function teste() {
+            //     var y = "YYYYYYYYYY";
+            //     console.log(x);
+            //     console.log("teste");
+            // }
+            // console.log(y)
+            // teste()
+            {
+                let x = 2;
+                console.log(x);
+            }
+            console.log(x);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>for, while e switch</title>
+        <style>
+            body {
+                font-family: Arial;
+            }
+            article {
+                margin: 5px;
+                padding: 5px;
+                border: 3px solid seagreen;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>for, while e switch</h1>
+        <section>
+            <article>
+                <h2>for</h2>
+                <p id="r1"></p>
+                <p id="r2"></p>
+                <p id="r3"></p>
+                <p id="r4"></p>
+                <p id="r5"></p>
+                <script>
+                    for (let i = 1; i <= 5; i++) {
+                        document.getElementById("r" + i).innerHTML = "Conteúdo do parágrafo " + i;
+                    }
+                </script>
+            </article>
+            <article>
+                <h2>for com descremento</h2>
+                <p id="r100"></p>
+                <p id="r90"></p>
+                <p id="r80"></p>
+                <p id="r70"></p>
+                <p id="r60"></p>
+                <script>
+//                    console.log("Teste ***");
+                    for (let j = 100; j >= 60; j = j - 10) {
+//                        console.log(j);
+                        document.getElementById("r" + j).innerHTML = "Conteúdo do parágrafo " + j;
+                    }
+                </script>
+            </article>
+            <article>
+                <h2>for of</h2>
+                <p>O for of é uma variação do for tradicional. Ele nos permite iterar (passar em um por um) sobre os valores de um array de maneira mais enxuta (escrevendo menos código).</p>
+                <script>
+                    const frutas = ["Maçã", "Banana", "Melancia", "Laranja", "Uva"];
+                    // Usando for tradicional para percorrer os valores do meu array
+                    for (let i = 0; i < frutas.length; i = i + 1) { 
+                        const fruta = frutas[i]; 
+                        document.write(fruta + "<br>"); 
+                    }
+                    // Usando o for of (for resumido)
+                    for (let fruta of frutas) {
+                        document.write(fruta + "<br>" )
+                    }
+                </script>
+            </article>
+            <article>
+                <h2>for in</h2>
+                <p>O for in também é uma variação do for tradicional. Ele nos permite iterar (passar em um por um) sbre as propriedades de um objeto.</p>
+                <script>
+                    const objetos = ["Carro", "Casa", "Celular", "Espelho", "Porta"];
+                    for (let index in objetos) {
+                        document.write(index + ": ")
+                        document.write(objetos[index] + ", <br>")
+                    }
+                </script>
+            </article>
+            <article>
+                <h2>for in com objetos</h2>
+                <script>
+                    const pessoa = {
+                        nome: "Renan",
+                        sobrenome: "Germano",
+                        idade: "24",
+                        profissao: "desenvolvedor",
+                        altura: 1.78
+                    };
+                    for (let propriedade in pessoa) {
+                        document.write(propriedade + ": ");
+                        document.write(pessoa[propriedade] + ", <br>");
+                    }
+                </script>
+            </article>
+            <article>
+                <h2>Usando while</h2>
+                <script>
+                    let controladora = 0;
+                    while (controladora < 10) {
+                        document.write(++controladora + "<br>");
+                    }
+                </script>
+            </article>
+            <article>
+                <h2>Usando do while</h2>
+                <script>
+                    let x = 0;
+                    do {
+                        document.write(++x + "<br>");
+                    } while(x < 10)
+                </script>
+            </article>
+            <article>
+                <h2>Usando switch case</h2>
+                <form>
+                    <label for="dia">Escolha um dia: </label>
+                    <select id="dia" onchange="verficaDia()">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                    </select>
+                    <button type="button" onclick="verficaDia()">Ver dia da semana</button>
+                </form>
+                <p>Hoje é <span id="resultado"></span>.</p>
+                <script>
+                    function verficaDia() {
+                        const select = document.getElementById("dia");
+                        const valor = Number(select.value);
+                        const span = document.getElementById("resultado");
+                        switch (valor) {
+                            case 1:
+                                span.innerHTML = "segunda-feira";
+                                break;
+                            case 2:
+                                span.innerHTML = "terça-feira";
+                                break;
+                            case 3:
+                                span.innerHTML = "quarta-feira";
+                                break;
+                            case 4:
+                                span.innerHTML = "quinta-feira";
+                                break;
+                            case 5:
+                                span.innerHTML = "sexta-feira";
+                                break;
+                            case 6:
+                                span.innerHTML = "sábado";
+                                break;
+                            case 7:
+                                span.innerHTML = "domingo";
+                        }
+                    }
+                </script>
+            </article>
+            <article>
+                <h2>Exercício matriz</h2>
+                <p>[1, 2, 3]</p>
+                <p>[4, 5, 6]</p>
+                <p>[7, 8, 9]</p>
+                <form>
+                    <label>Linha: 
+                        <input type="number" min="1" max="3" step="1" placeholder="informe a linha" id="linha" style="width: 200px;">
+                    </label><br>
+                    <label>Coluna: 
+                        <input type="number" min="1" max="3" step="1" placeholder="informe a coluna" id="coluna"  style="width: 200px;">
+                    </label><br>
+                    <button type="button" onclick="selecionarValor()">Pegar valor</button>
+                </form>
+                <p>O valor selecionado é: <span id="valor-selecionado"></span>.</p>
+                <script>
+                    const matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+                    function selecionarValor() {
+                        console.log("chamou a funcao");
+                        // pegar o valor do input linha (transformar em numero)
+                        // pegar o valor do input coluna (transformar em numero)
+                        // pegar o span 
+                        // atualizar o conteudo do span com o valor da posicao selecionada
+                    }
+                </script>
+            </article>
+        </section>
+    </body>
+</html>
