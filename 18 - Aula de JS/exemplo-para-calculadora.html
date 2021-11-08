@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exemplo para calculadora</title>
+    </head>
+    <body>
+        <h1>Exemplo para calculadora</h1>
+        <button type="button" onclick="clicouNoBotao('A')">A</button>
+        <button type="button" onclick="clicouNoBotao('B')">B</button>
+        <button type="button" onclick="clicouNoBotao('C')">C</button>
+        <button type="button" onclick="clicouNoBotao('D')">D</button>
+        <button type="button" onclick="mostrar()">MOSTRAR</button>
+        <button type="button" onclick="proximo()">PRÓXIMO</button>
+        <button type="button" onclick="apagar()">APAGAR</button>
+        <script>
+            let valoresDigitados = "";
+            let segundaCombinacao = "";
+            let cliclouEmProximo = false;
+            function clicouNoBotao(valor) {
+                if (cliclouEmProximo) {
+                    segundaCombinacao = segundaCombinacao + valor;
+                } else {
+                    valoresDigitados = valoresDigitados + valor;
+                }
+            }
+            function mostrar() {
+                window.alert("Combinação 1: " + valoresDigitados + ". Combinação 2: " + segundaCombinacao + ".");
+            }
+            function apagar() {
+                valoresDigitados = "";
+            }
+            function proximo() {
+                cliclouEmProximo = true;
+            }
+        </script>
+    </body>
+</html>
