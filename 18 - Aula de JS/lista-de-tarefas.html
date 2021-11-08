@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lista de tarefas</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            input[type=text] {
+                width: 300px;
+                height: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lista de tarefas</h1>
+
+        <form id="tarefas">
+        </form>
+
+        <form>
+            <label for="tarefa">Tarefa: </label><br>
+            <input type="text" id="tarefa" placeholder="Insira sua tarefa">
+            <button type="button" onclick="adicionarTarefa()">Adicionar</button>
+        </form>
+
+        <script>
+            const tarefas = [];
+            let contador = 0;
+
+            function criarTarefa(nome, concluido = false) {
+                return {
+                    id: contador++,
+                    nome: nome,
+                    concluido: concluido
+                }
+            }
+
+            function adicionarTarefa() {
+                const input = document.getElementById("tarefa");
+                const nomeDaTarefa = input.value;
+                const tarefa = criarTarefa(nomeDaTarefa);
+                tarefas.push(tarefa);
+                atualizarTela()
+            }
+
+            function atualizarTela() {
+                const formTarefas = document.getElementById("tarefas");
+                while (formTarefas.children.length > 0) {
+                    formTarefas.removeChild(formTarefas.firstChild)
+                }
+                for (const tarefa of tarefas) {
+                    const inputCheckbox = document.createElement("input");
+                    inputCheckbox.setAttribute("type", "checkbox");
+                    const label = document.createElement("label");
+                    label.innerHTML = tarefa.nome;
+                    const br = document.createElement("br");
+                    formTarefas.appendChild(inputCheckbox);
+                    formTarefas.appendChild(label);
+                    formTarefas.appendChild(br);
+                }
+            }
+        </script>
+    </body>
+</html>

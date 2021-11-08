@@ -1,0 +1,467 @@
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tabela Periódica</title>
+        <style>
+
+            body {
+                font-size: 12px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            h1 { font-size: 2.2rem; }
+
+            table {
+                border-collapse: collapse;
+            }
+
+            th {
+                height: 20px;
+                position: relative;
+                font-size: 1.2rem;
+            }
+
+            th .th {
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                margin: 0;
+            }
+
+            th, td {
+                border: 2px solid white;
+            }
+
+            td p {
+                width: 60px;
+                height: 60px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+	            padding: 5px;
+            }
+
+            td, .s0 {
+                background-color: gold;
+                padding: 0;
+            }
+
+            .number {
+                font-size: 0.8rem;
+            }
+
+            .letter {
+                font-size: 1.75rem;
+                font-weight: bold;
+            }
+
+            .name {
+                font-size: 0.7rem;
+            }
+
+            .s1 {
+                background-color: turquoise;
+            }
+            .s2 {
+                background-color: steelblue;
+                color: white;
+            }
+            .s3 {
+                background-color: dodgerblue;
+                color: white;
+            }
+            .s4 {
+                background-color: lightcoral;
+            }
+            .s5 {
+                background-color: tomato;
+            }
+            .s6 {
+                background-color: seagreen;
+                color: white;
+            }
+            .s7 {
+                background-color: yellowgreen;
+            }
+            .s8 {
+                background-color: khaki;
+            }
+            .s9 {
+                background-color: lightsteelblue;
+            }
+            .red {
+                color: red;
+            }
+
+            .complement {
+                margin-top: 20px;
+                margin-left: 145px;
+            }
+
+            .complement caption {
+                font-size: 2.2rem;
+                font-weight: bold;
+                text-align: left;
+            }
+
+	        td p:hover { border: 3px solid black; padding: 2; cursor: pointer; }
+            /* .s2 p:hover, .s3 p:hover, .s6 p:hover { border-color: white; } */
+        </style>
+    </head>
+    <body>
+        <h1>Tabela Periódica</h1>
+        <main>
+            <table>
+                <!-- <thead> -->
+                    <tr>
+                        <th><p class="th">1A</p></th>
+                        <th rowspan="2"><p class="th">2A</p></th>
+                        <th rowspan="4"><p class="th">3B</p></th>
+                        <th rowspan="4"><p class="th">4B</p></th>
+                        <th rowspan="4"><p class="th">5B</p></th>
+                        <th rowspan="4"><p class="th">6B</p></th>
+                        <th rowspan="4"><p class="th">7B</p></th>
+                        <th rowspan="4"><p class="th">8B</p></th>
+                        <th rowspan="4"><p class="th">8B</p></th>
+                        <th rowspan="4"><p class="th">8B</p></th>
+                        <th rowspan="4"><p class="th">1B</p></th>
+                        <th rowspan="4"><p class="th">2B</p></th>
+                        <th rowspan="2"><p class="th">3A</p></th>
+                        <th rowspan="2"><p class="th">4A</p></th>
+                        <th rowspan="2"><p class="th">5A</p></th>
+                        <th rowspan="2"><p class="th">6A</p></th>
+                        <th rowspan="2"><p class="th">7A</p></th>
+                        <th><p class="th">8A</p></th>
+                    </tr>
+                <!-- </thead>
+                <tbody> -->
+                    <tr>
+                        <td class="s1"><p><span class="number">1</span><span class="letter">H</span><span class="name">Hidogênio</span></p></td>
+                        <td class="s9"><p><span class="number">11</span><span class="letter">He</span><span class="name">Hélio</span></p></td>
+                    </tr>
+                    <tr>
+                        <td class="s2"><p><span class="number">3</span><span class="letter">Li</span><span class="name">Lítio</span></p></td>
+                        <td class="s3"><p><span class="number">4</span><span class="letter">Be</span><span class="name">Beríleo</span></p></td>
+                        <td class="s6"><p><span class="number">5</span><span class="letter">B</span><span class="name">Boro</span></p></td>
+                        <td class="s1"><p><span class="number">6</span><span class="letter">C</span><span class="name">Carbono</span></p></td>
+                        <td class="s1"><p><span class="number">7</span><span class="letter">N</span><span class="name">Nitrogênio</span></p></td>
+                        <td class="s1"><p><span class="number">8</span><span class="letter">O</span><span class="name">Oxigênio</span></p></td>
+                        <td class="s8"><p><span class="number">9</span><span class="letter">F</span><span class="name">Flúor</span></p></td>
+                        <td class="s9"><p><span class="number">10</span><span class="letter">Ne</span><span class="name">Neônio</span></p></td>
+                    </tr>
+                    <tr>
+                        <td class="s2"><p><span class="number">11</span><span class="letter">Na</span><span class="name">Sódio</span></p></td>
+                        <td class="s3"><p><span class="number">12</span><span class="letter">Mg</span><span class="name">Magnésio</span></p></td>
+                        <td class="s7"><p><span class="number">13</span><span class="letter">Al</span><span class="name">Alumínio</span></p></td>
+                        <td class="s6"><p><span class="number">14</span><span class="letter">Si</span><span class="name">Silício</span></p></td>
+                        <td class="s1"><p><span class="number">15</span><span class="letter">P</span><span class="name">Fósforo</span></p></td>
+                        <td class="s1"><p><span class="number">16</span><span class="letter">S</span><span class="name">Enxofre</span></p></td>
+                        <td class="s8"><p><span class="number">17</span><span class="letter">Cl</span><span class="name">Cloro</span></p></td>
+                        <td class="s9"><p><span class="number">18</span><span class="letter">Ar</span><span class="name">Argônio</span></p></td>
+                    </tr>
+                    <tr>
+                        <td class="s2"><p><span class="number">19</span><span class="letter">K</span><span class="name">Potássio</span></p></td>
+                        <td class="s3"><p><span class="number">20</span><span class="letter">Ca</span><span class="name">Cálcio</span></p></td>
+                        <td><p><span class="number">21</span><span class="letter">Sc</span><span class="name">Escândio</span></p></td>
+                        <td><p><span class="number">22</span><span class="letter">Ti</span><span class="name">Titânio</span></p></td>
+                        <td><p><span class="number">23</span><span class="letter">V</span><span class="name">Vanádio</span></p></td>
+                        <td><p><span class="number">24</span><span class="letter">Cr</span><span class="name">Crômio</span></p></td>
+                        <td><p><span class="number">25</span><span class="letter">Mn</span><span class="name">Manganês</span></p></td>
+                        <td><p><span class="number">26</span><span class="letter">Fe</span><span class="name">Ferro</span></p></td>
+                        <td><p><span class="number">27</span><span class="letter">Co</span><span class="name">Cobalto</span></p></td>
+                        <td><p><span class="number">28</span><span class="letter">Ni</span><span class="name">Níquel</span></p></td>
+                        <td><p><span class="number">29</span><span class="letter">Cu</span><span class="name">Cobre</span></p></td>
+                        <td><p><span class="number">30</span><span class="letter">Zn</span><span class="name">Zinco</span></p></td>
+                        <td class="s7"><p><span class="number">31</span><span class="letter">Ga</span><span class="name">Gálio</span></p></td>
+                        <td class="s6"><p><span class="number">32</span><span class="letter">Ge</span><span class="name">Gálio</span></p></td>
+                        <td class="s6"><p><span class="number">33</span><span class="letter">As</span><span class="name">Arsênio</span></p></td>
+                        <td class="s1"><p><span class="number">34</span><span class="letter">Se</span><span class="name">Selênio</span></p></td>
+                        <td class="s8 red"><p><span class="number">35</span><span class="letter">Br</span><span class="name">Bromo</span></p></td>
+                        <td class="s9"><p><span class="number">36</span><span class="letter">Kr</span><span class="name">kriptônio</span></p></td>
+                    </tr>
+                    <tr>
+                        <td class="s2"><p><span class="number">37</span><span class="letter">Rb</span><span class="name">Rubídeo</span></p></td>
+                        <td class="s3"><p><span class="number">38</span><span class="letter">Sr</span><span class="name">Estrôncio</span></p></td>
+                        <td><p><span class="number">39</span><span class="letter">Y</span><span class="name">Ítrio</span></p></td>
+                        <td><p><span class="number">40</span><span class="letter">Zr</span><span class="name">Zarcônio</span></p></td>
+                        <td><p><span class="number">41</span><span class="letter">Nb</span><span class="name">Nióbio</span></p></td>
+                        <td><p><span class="number">42</span><span class="letter">Mo</span><span class="name">Molibidênio</span></p></td>
+                        <td><p><span class="number">43</span><span class="letter">Tc</span><span class="name">Tecnécio</span></p></td>
+                        <td><p><span class="number">44</span><span class="letter">Ru</span><span class="name">Rutênio</span></p></td>
+                        <td><p><span class="number">45</span><span class="letter">Rh</span><span class="name">Ródio</span></p></td>
+                        <td><p><span class="number">46</span><span class="letter">Pd</span><span class="name">Pládio</span></p></td>
+                        <td><p><span class="number">47</span><span class="letter">Ag</span><span class="name">Prata</span></p></td>
+                        <td><p><span class="number">48</span><span class="letter">Cd</span><span class="name">Cádmio</span></p></td>
+                        <td class="s7"><p><span class="number">49</span><span class="letter">In</span><span class="name">Índio</span></p></td>
+                        <td class="s7"><p><span class="number">50</span><span class="letter">Sn</span><span class="name">Estanho</span></p></td>
+                        <td class="s6"><p><span class="number">51</span><span class="letter">Sb</span><span class="name">Antimônio</span></p></td>
+                        <td class="s6"><p><span class="number">52</span><span class="letter">Te</span><span class="name">Telúrio</span></p></td>
+                        <td class="s8"><p><span class="number">53</span><span class="letter">I</span><span class="name">Iodo</span></p></td>
+                        <td class="s9"><p><span class="number">54</span><span class="letter">Xe</span><span class="name">Xenônio</span></p></td>
+                    </tr>
+                    <tr>
+                        <td class="s2"><p><span class="number">55</span><span class="letter">Cs</span><span class="name">Césio</span></p></td>
+                        <td class="s3"><p><span class="number">56</span><span class="letter">Ba</span><span class="name">Bário</span></p></td>
+                        <td class="s4"><p><span class="number">57 - 71</span class="letter"><span class="letter">*</span><span class="name">Lantanídeos</span></p></td>
+                        <td><p><span class="number">72</span><span class="letter">Hf</span><span class="name">Ráfnio</span></p></td>
+                        <td><p><span class="number">73</span><span class="letter">Ta</span><span class="name">Tântalo</span></p></td>
+                        <td><p><span class="number">74</span><span class="letter">W</span><span class="name">Tungstênio</span></p></td>
+                        <td><p><span class="number">75</span><span class="letter">Re</span><span class="name">Rênio</span></p></td>
+                        <td><p><span class="number">76</span><span class="letter">Os</span><span class="name">Ósmio</span></p></td>
+                        <td><p><span class="number">77</span><span class="letter">Ir</span><span class="name">Irídio</span></p></td>
+                        <td><p><span class="number">78</span><span class="letter">Pt</span><span class="name">Platina</span></p></td>
+                        <td><p><span class="number">79</span><span class="letter">Ai</span><span class="name">Ouro</span></p></td>
+                        <td class="red"><p><span class="number">80</span><span class="letter">Hg</span><span class="name">Mercúrio</span></p></td>
+                        <td class="s7"><p><span class="number">81</span><span class="letter">Tl</span><span class="name">Tálio</span></p></td>
+                        <td class="s7"><p><span class="number">82</span><span class="letter">Pb</span><span class="name">Chumbo</span></p></td>
+                        <td class="s7"><p><span class="number">83</span><span class="letter">Bi</span><span class="name">Bismuto</span></p></td>
+                        <td class="s6"><p><span class="number">84</span><span class="letter">Po</span><span class="name">Polônio</span></p></td>
+                        <td class="s8"><p><span class="number">85</span><span class="letter">At</span><span class="name">Astato</span></p></td>
+                        <td class="s9"><p><span class="number">86</span><span class="letter">Rn</span><span class="name">Radônio</span></p></td>
+                    </tr>
+                    <tr>
+                        <td class="s2"><p><span class="number">87</span><span class="letter">Fr</span><span class="name">Frâncio</span></p></td>
+                        <td class="s3"><p><span class="number">88</span><span class="letter">Ra</span><span class="name">Rádio</span></p></td>
+                        <td class="s5"><p><span class="number">88 - 103</span class="letter"><span class="letter">**</span><span class="name">Actinídeos</span></p></td>
+                        <td><p><span class="number">104</span><span class="letter">Rf</span><span class="name">Rhuterfórdio</span></p></td>
+                        <td><p><span class="number">105</span><span class="letter">Db</span><span class="name">Rhuterfórdio</span></p></td>
+                        <td><p><span class="number">106</span><span class="letter">Sg</span><span class="name">Rhuterfórdio</span></p></td>
+                        <td><p><span class="number">107</span><span class="letter">Bh</span><span class="name">Bóhrio</span></p></td>
+                        <td><p><span class="number">108</span><span class="letter">Hs</span><span class="name">Hássio</span></p></td>
+                        <td><p><span class="number">109</span><span class="letter">Mt</span><span class="name">Meitnério</span></p></td>
+                        <td><p><span class="number">110</span><span class="letter">Ds</span><span class="name">Darmstádio</span></p></td>
+                        <td><p><span class="number">111</span><span class="letter">Rg</span><span class="name">Roentgênio</span></p></td>
+                        <td><p><span class="number">112</span><span class="letter">Cp</span><span class="name">Copernício</span></p></td>
+                        <td class="s7"><p><span class="number">113</span><span class="letter">Uut</span><span class="name">Ununtrium</span></p></td>
+                        <td class="s7"><p><span class="number">114</span><span class="letter">Uuq</span><span class="name">Ununquadio</span></p></td>
+                        <td class="s7"><p><span class="number">115</span><span class="letter">Uup</span><span class="name">Ununpentio</span></p></td>
+                        <td class="s7"><p><span class="number">116</span><span class="letter">Uuh</span><span class="name">Ununhexio</span></p></td>
+                        <td class="s7"><p><span class="number">117</span><span class="letter">Uus</span><span class="name">Ununséptio</span></p></td>
+                        <td class="s7"><p><span class="number">118</span><span class="letter">Uuo</span><span class="name">Ununoctium</span></p></td>
+                    </tr>
+                <!-- </tbody> -->
+            </table>
+            <table class="complement">
+                <caption>Série dos Lantanídeos</caption>
+                <tr>
+                    <td class="s4"><p><span class="number">57</span><span class="letter">La</span><span class="name">Lantânio</span></p></td>
+                    <td class="s4"><p><span class="number">58</span><span class="letter">Ce</span><span class="name">Cério</span></p></td>
+                    <td class="s4"><p><span class="number">59</span><span class="letter">Pr</span><span class="name">Praseodímio</span></p></td>
+                    <td class="s4"><p><span class="number">60</span><span class="letter">Nd</span><span class="name">Neodímio</span></p></td>
+                    <td class="s4"><p><span class="number">61</span><span class="letter">Pm</span><span class="name">Promécio</span></p></td>
+                    <td class="s4"><p><span class="number">62</span><span class="letter">Sm</span><span class="name">Samário</span></p></td>
+                    <td class="s4"><p><span class="number">63</span><span class="letter">Eu</span><span class="name">Európio</span></p></td>
+                    <td class="s4"><p><span class="number">64</span><span class="letter">Gd</span><span class="name">Gadolínio</span></p></td>
+                    <td class="s4"><p><span class="number">65</span><span class="letter">Tb</span><span class="name">Térbio</span></p></td>
+                    <td class="s4"><p><span class="number">66</span><span class="letter">Dy</span><span class="name">Disprosio</span></p></td>
+                    <td class="s4"><p><span class="number">67</span><span class="letter">Ho</span><span class="name">Holmio</span></p></td>
+                    <td class="s4"><p><span class="number">68</span><span class="letter">Er</span><span class="name">Érbio</span></p></td>
+                    <td class="s4"><p><span class="number">69</span><span class="letter">Tm</span><span class="name">Túlio</span></p></td>
+                    <td class="s4"><p><span class="number">70</span><span class="letter">Yb</span><span class="name">Itérbio</span></p></td>
+                    <td class="s4"><p><span class="number">71</span><span class="letter">Lu</span><span class="name">Lutécio</span></p></td>
+                </tr>
+            </table>
+            <table class="complement">
+                <caption>Série dos Actinídeos</caption>
+                <tr>
+                    <td class="s5"><p><span class="number">89</span><span class="letter">Ac</span><span class="name">Actínio</span></p></td>
+                    <td class="s5"><p><span class="number">90</span><span class="letter">Th</span><span class="name">Tório</span></p></td>
+                    <td class="s5"><p><span class="number">91</span><span class="letter">Pa</span><span class="name">Protactínio</span></p></td>
+                    <td class="s5"><p><span class="number">92</span><span class="letter">U</span><span class="name">Urânio</span></p></td>
+                    <td class="s5"><p><span class="number">93</span><span class="letter">Np</span><span class="name">Neptúnio</span></p></td>
+                    <td class="s5"><p><span class="number">94</span><span class="letter">Pu</span><span class="name">Plutônio</span></p></td>
+                    <td class="s5"><p><span class="number">95</span><span class="letter">Am</span><span class="name">Amerício</span></p></td>
+                    <td class="s5"><p><span class="number">96</span><span class="letter">Cm</span><span class="name">Cúrio</span></p></td>
+                    <td class="s5"><p><span class="number">97</span><span class="letter">Bk</span><span class="name">Berquélio</span></p></td>
+                    <td class="s5"><p><span class="number">98</span><span class="letter">Cf</span><span class="name">Califórnio</span></p></td>
+                    <td class="s5"><p><span class="number">99</span><span class="letter">Es</span><span class="name">Eisntênio</span></p></td>
+                    <td class="s5"><p><span class="number">100</span><span class="letter">Fm</span><span class="name">Férmio</span></p></td>
+                    <td class="s5"><p><span class="number">101</span><span class="letter">Md</span><span class="name">Mendelévio</span></p></td>
+                    <td class="s5"><p><span class="number">102</span><span class="letter">No</span><span class="name">Nobélio</span></p></td>
+                    <td class="s5"><p><span class="number">103</span><span class="letter">Lr</span><span class="name">Laurêncio</span></p></td>
+                </tr>
+            </table>
+        </main>
+        <p id="selected-el" class="s1"><span class="number">1</span><span class="letter">H</span><span class="name">Hidogênio</span></p>
+            <style>
+                #selected-el {
+                    width: 60px;
+                    height: 60px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 5px;
+                    margin-left: 20px;
+                }
+
+                #selected-el .number {
+                    font-size: 3.3rem;
+                }
+
+                #selected-el .letter {
+                    font-size: 4.25rem;
+                    font-weight: bold;
+                }
+
+                #selected-el .name {
+                    font-size: 3.2rem;
+                }
+                main {
+                    float: left;
+                }
+                #selected-el {
+                    width: 300px;
+                    height: 300px;
+                    border: 3px solid black;
+                    float: left;
+                }
+                #selected-el {
+                    justify-content: space-evenly;
+                }
+            </style>
+            <script>
+                const detalhes = {
+                    "1": "O hidrogênio é facilmente o elemento mais abundante do universo. É encontrado no Sol e na maioria das estrelas, e o planeta Júpiter é composto principalmente de hidrogênio. Na Terra, o hidrogênio é encontrado em maiores quantidades como água.",
+                    "2": "O hélio é um elemento químico com o símbolo He e número atômico 2. É um gás incolor, inodoro, insípido, não tóxico, inerte, monoatômico, o primeiro do grupo dos gases nobres da tabela periódica. Seu ponto de ebulição é o mais baixo entre todos os elementos.",
+                    "3": "O lítio é um elemento químico com o símbolo Li e o número atômico 3. É um metal alcalino macio e branco prateado. Sob condições padrão, é o metal mais leve e o elemento sólido mais leve",
+                    "4": "Berílio é um elemento químico com o símbolo Be e número atômico 4. É um elemento relativamente raro no universo, geralmente ocorrendo como produto da fragmentação de núcleos atômicos maiores que colidiram com os raios cósmicos.",
+                    "5": "O boro é um elemento químico com símbolo B e número atômico 5. Produzido inteiramente por fragmentação de raios cósmicos e supernovas e não por nucleossíntese estelar, é um elemento de baixa abundância no sistema solar e na crosta terrestre.",
+                    "6": "O carbono é um elemento químico com o símbolo C e número atômico 6. É não metálico e tetravalente, disponibilizando quatro elétrons para formar ligações químicas covalentes. Pertence ao grupo 14 da tabela periódica",
+                    "7": "O nitrogênio é um elemento químico com símbolo N e número atômico 7. Foi descoberto e isolado pela primeira vez pelo médico escocês Daniel Rutherford em 1772. É o quinto elemento mais abundante no universo e compõe cerca de 78% da atmosfera da Terra.",
+                    "8": "O oxigênio é um elemento químico com o símbolo O e número atômico 8. É um membro do grupo calcogênio da tabela periódica, um não metal altamente reativo e um agente oxidante que forma óxidos prontamente com a maioria dos elementos, bem como com outros compostos.",
+                    "9": "O flúor é um elemento químico com o símbolo F e número atômico 9. É o halogênio mais leve e existe como um gás diatômico amarelo pálido altamente tóxico em condições padrão.",
+                    "10": "O neônio é um elemento químico com o símbolo Ne e número atômico 10. É um gás nobre. O néon é um gás monoatômico inerte incolor, inodoro sob condições padrão, com cerca de dois terços da densidade do ar.",
+                    "11": "O sódio é um elemento químico com o símbolo Na e número atômico 11. É um metal macio, branco prateado e altamente reativo. É o sexto elemento mais abundante na crosta terrestre e existe em vários minerais, como feldspatos, sodalita e sal-gema (NaCl)",
+                    "12": "Magnésio é um elemento químico com o símbolo Mg e número atômico 12. É um sólido cinza brilhante que tem uma semelhança física próxima com os outros cinco elementos na segunda coluna (grupo 2, ou metais alcalino-terrosos) da tabela periódica: todos os grupos 2 elementos têm a mesma configuração eletrônica na camada externa do elétron e uma estrutura de cristal semelhante.",
+                    "13": "Alumínio é um elemento químico com o símbolo Al e número atômico 13. É um metal dúctil, macio, não magnético e branco prateado do grupo do boro.",
+                    "14": "O silício é um elemento químico com o símbolo Si e número atômico 14. Um sólido cristalino duro e quebradiço com um brilho metálico cinza-azulado, é um metalóide tetravalente e semicondutor.",
+                    "15": "Fósforo é um elemento químico com o símbolo P e número atômico 15. Como um elemento, o fósforo existe em duas formas principais: fósforo branco e fósforo vermelho, mas por ser altamente reativo, o fósforo nunca é encontrado como um elemento livre na Terra.",
+                    "16": "Enxofre é um elemento químico com o símbolo S e número atômico 16. É abundante, multivalente e não metálico. Em condições normais, os átomos de enxofre formam moléculas octatômicas cíclicas.",
+                    "17": "O cloro é um elemento químico com símbolo Cl e número atômico 17. O segundo mais leve dos halogênios, ele aparece entre o flúor e o bromo na tabela periódica e suas propriedades são principalmente intermediárias entre eles.",
+                    "18": "O argônio é um elemento químico com símbolo Ar e número atômico 18. Está no grupo 18 da tabela periódica e é um gás nobre. Argônio é o terceiro gás mais abundante na atmosfera da Terra.",
+                    "19": "O potássio é um elemento químico com o símbolo K e o número atômico 19. Foi isolado pela primeira vez do potássio, as cinzas das plantas, de onde deriva seu nome. Na tabela periódica, o potássio é um dos metais alcalinos.",
+                    "20": "O cálcio é um elemento químico com o símbolo Ca e número atômico 20. Um metal alcalino-terroso, o cálcio é um metal amarelo pálido reativo que forma uma camada escura de óxido-nitreto quando exposto ao ar.",
+                    "21": "O escândio é um elemento químico com o símbolo Sc e o número atômico 21. Um elemento de bloco d metálico branco prateado, historicamente classificado como um elemento de terra rara, junto com o ítrio e os lantanídeos.",
+                    "22": "O titânio é um elemento químico com o símbolo Ti e o número atômico 22. É um metal de transição brilhante com uma cor prateada, baixa densidade e alta resistência. O titânio é resistente à corrosão na água do mar, água régia e cloro.",
+                    "23": "O vanádio é um elemento químico com o símbolo V e número atômico 23. É um metal de transição duro, cinza prateado, dúctil e maleável. O metal elementar raramente é encontrado na natureza, mas uma vez isolado artificialmente, a formação de uma camada de óxido (passivação) estabiliza um pouco o metal livre contra oxidação posterior.",
+                    "24": "O cromo é um elemento químico com o símbolo Cr e número atômico 24. É o primeiro elemento do grupo 6. É um metal cinza metálico, brilhante, duro e quebradiço que recebe um alto polimento, resiste ao embaciamento e tem um alto ponto de fusão ...",
+                    "25": "O manganês é um elemento químico com o símbolo Mn e número atômico 25. Não é encontrado como elemento livre na natureza; é freqüentemente encontrado em minerais em combinação com ferro.",
+                    "26": "O ferro é um elemento químico com símbolo Fe e número atômico 26. É um metal da primeira série de transição. É em massa o elemento mais comum na Terra, formando grande parte do núcleo externo e interno da Terra.",
+                    "27": "O cobalto é um elemento químico com o símbolo Co e número atômico 27. Como o níquel, o cobalto é encontrado na crosta apenas na forma quimicamente combinada, exceto por pequenos depósitos encontrados em ligas de ferro meteórico natural.",
+                    "28": "O níquel é um elemento químico com o símbolo Ni e número atômico 28. É um metal brilhante branco prateado com um leve tom dourado. O níquel pertence aos metais de transição e é duro e dúctil.",
+                    "29": "O cobre é um elemento químico com o símbolo Cu e número atômico 29. É um metal macio, maleável e dúctil com condutividade térmica e elétrica muito alta. Uma superfície recém-exposta de cobre puro tem uma cor laranja-avermelhada.",
+                    "30": "O zinco é um elemento químico com o símbolo Zn e número atômico 30. É o primeiro elemento do grupo 12 da tabela periódica. Em alguns aspectos, o zinco é quimicamente semelhante ao magnésio: ambos os elementos exibem apenas um estado de oxidação normal (+2) e os íons Zn ^ 2 + e Mg ^ 2 + são de tamanho semelhante.",
+                    "31": "O gálio é um elemento químico com símbolo Ga e número atômico 31. Está no grupo 13 da tabela periódica e, portanto, tem semelhanças com os outros metais do grupo, alumínio, índio e tálio. O gálio não ocorre como um elemento livre na natureza, mas como compostos de gálio (III) em pequenas quantidades nos minérios de zinco e na bauxita.",
+                    "32": "Germânio  um elemento químico com o símbolo Ge e número atômico 32. É um metalóide lustroso, duro, branco-acinzentado do grupo do carbono, quimicamente semelhante aos seus vizinhos do grupo estanho e silício. O germânio puro é um semicondutor com aparência semelhante ao silício elementar.",
+                    "33": "O arsênio é um elemento químico com o símbolo As e número atômico 33. O arsênio ocorre em muitos minerais, geralmente em combinação com enxofre e metais, mas também como um cristal elementar puro. O arsênico é um metalóide.",
+                    "34": "Selenium é uma estrutura de teste de software portátil para aplicativos da web. O Selenium fornece uma ferramenta de reprodução para testes de autoria sem a necessidade de aprender uma linguagem de script de teste.",
+                    "35": "O bromo é um elemento químico com o símbolo Br e número atômico 35. É o terceiro halogênio mais leve e é um líquido marrom-avermelhado fumegante em temperatura ambiente que evapora prontamente para formar um gás de cor semelhante.",
+                    "36": "Kriptônio é um elemento químico com o símbolo Kr e número atômico 36. É um membro do grupo 18 (gases nobres) elementos. Um gás nobre incolor, inodoro e insípido, o criptônio ocorre em pequenas quantidades na atmosfera e é freqüentemente usado com outros gases raros em lâmpadas fluorescentes. Com raras exceções, o criptônio é quimicamente inerte.",
+                    "37": "Rubídio é um elemento químico com o símbolo Rb e número atômico 37. Rubídio é um elemento metálico macio e branco prateado do grupo dos metais alcalinos, com peso atômico padrão de 85,4678.",
+                    "38": "Estrôncio é o elemento químico com o símbolo Sr e número atômico 38. Um metal alcalino-terroso, o estrôncio é um elemento metálico amarelado branco prateado macio que é altamente reativo quimicamente.",
+                    "39": "Ítrio é um elemento químico com o símbolo Y e número atômico 39. É um metal de transição metálico prateado quimicamente semelhante aos lantanídeos e muitas vezes foi classificado como um elemento de terra rara.",
+                    "40": "O zircônio é um elemento químico com o símbolo Zr e número atômico 40. O nome zircônio deriva do nome do mineral zircônio, a fonte mais importante de zircônio.",
+                    "41": "Nióbio, anteriormente columbium, é um elemento químico com o símbolo Nb e número atômico 41. É um metal de transição macio, cinza e dúctil, freqüentemente encontrado nos minerais pirocloro e columbita.",
+                    "42": "O molibdênio é um elemento químico com símbolo Mo e número atômico 42. O nome vem do neolatino molibdaeno, do grego antigo molibdos, que significa chumbo, pois seus minérios eram confundidos com minérios de chumbo.",
+                    "43": "Tecnécio é um elemento químico com o símbolo Tc e número atômico 43. É o elemento mais leve cujos isótopos são todos radioativos; nenhum é estável.",
+                    "44": "O rutênio é um elemento químico com o símbolo Ru e número atômico 44. É um metal de transição raro pertencente ao grupo da platina da tabela periódica. Como os outros metais do grupo da platina, o rutênio é inerte à maioria dos outros produtos químicos",
+                    "45": "O ródio é um elemento químico com o símbolo Rh e número atômico 45. É um metal de transição raro, branco-prateado, duro, resistente à corrosão e quimicamente inerte. É um metal nobre e membro do grupo da platina.",
+                    "46": "Palladium is a chemical element with symbol Pd and atomic number 46. It is a rare and lustrous silvery-white metal discovered in 1803 by William Hyde Wollaston.",
+                    "47": "A prata é um elemento químico com o símbolo Ag e número atômico 47. Um metal de transição macio, branco e brilhante que exibe a mais alta condutividade elétrica, condutividade térmica e refletividade de qualquer metal.",
+                    "48": "O cádmio é um elemento químico com o símbolo Cd e número atômico 48. Este metal branco-azulado macio é quimicamente semelhante aos dois outros metais estáveis ​​do grupo 12, zinco e mercúrio.",
+                    "49": "O índio é um elemento químico com o símbolo In e número atômico 49. É um metal pós-transição que compõe 0,21 partes por milhão da crosta.",
+                    "50": "O estanho é um elemento químico com símbolo Sn (do latim: stannum) e número atômico 50. É um metal pós-transição do grupo 14 da tabela periódica. É obtido principalmente a partir do mineral cassiterita, que contém dióxido de estanho, SnO2. O estanho mostra uma semelhança química com os dois vizinhos do grupo 14, germânio e chumbo.",
+                    "51": "O antimônio é um elemento químico com o símbolo Sb e o número atômico 51. Um metalóide cinza brilhante, é encontrado na natureza principalmente como o mineral sulfeto estibnita.",
+                    "52": "O telúrio é um elemento químico com o símbolo Te e número atômico 52. É um metalóide branco-prateado quebradiço, levemente tóxico, raro. O telúrio está quimicamente relacionado ao selênio e ao enxofre. Ocasionalmente, é encontrado na forma nativa como cristais elementares.",
+                    "53": "O iodo é um elemento químico com o símbolo I e número atômico 53. O mais pesado dos halogênios estáveis, ele existe como um sólido metálico preto-púrpura brilhante em condições padrão que sublima prontamente para formar um gás violeta.",
+                    "54": "O xenônio é um elemento químico com o símbolo Xe e número atômico 54. É um gás nobre incolor, denso e inodoro encontrado na atmosfera em pequenas quantidades.",
+                    "55": "Césio  é um elemento químico com o símbolo Cs e número atômico 55. É um metal alcalino macio e prateado com ponto de fusão de 28,5 ° C, o que o torna um dos apenas cinco metais elementares que são líquidos em temperatura ambiente ou próximo a ela. ...",
+                    "56": "O bário é um elemento químico com o símbolo Ba e número atômico 56. É o quinto elemento do grupo 2 e é um metal alcalino-terroso prateado macio. Devido à sua alta reatividade química, o bário nunca é encontrado na natureza como um elemento livre.",
+                    "57": "O lantânio é um elemento químico com o símbolo La e número atômico 57. É um metal macio, dúctil, branco-prateado que mancha rapidamente quando exposto ao ar e é macio o suficiente para ser cortado com uma faca.",
+                    "58": "O cério é um elemento químico com o símbolo Ce e número atômico 58. O cério é um metal macio, dúctil e branco prateado que mancha quando exposto ao ar e é macio o suficiente para ser cortado com uma faca.",
+                    "59": "O praseodímio é um elemento químico com símbolo Pr e número atômico 59. É o terceiro membro da série dos lantanídeos e é tradicionalmente considerado um dos metais de terras raras.",
+                    "60": "O neodímio é um elemento químico com o símbolo Nd e número atômico 60. É um metal prateado macio que mancha com o ar. O neodímio foi descoberto em 1885 pelo químico austríaco von Welsbach.",
+                    "61": "Promécio (anteriormente prometeu) é um elemento químico com o símbolo Pm e número atômico 61. Todos os seus isótopos são radioativos; é um dos dois únicos elementos que são seguidos na tabela periódica por elementos com formas estáveis, uma distinção compartilhada com o tecnécio.",
+                    "62": "Samário é um elemento químico com o símbolo Sm e número atômico 62. É um metal prateado moderadamente duro que oxida facilmente no ar. Sendo um membro típico da série dos lantanídeos, o samário geralmente assume o estado de oxidação +3.",
+                    "63": "Európio é um elemento químico com o símbolo Eu e número atômico 63. Foi isolado em 1901 e tem o nome do continente europeu. É um metal prateado moderadamente duro que oxida facilmente no ar e na água.",
+                    "64": "Gadolínio é um elemento químico com o símbolo Gd e número atômico 64. Gadolínio é um metal de terra rara maleável e dúctil, branco-prateado.",
+                    "65": "Térbio é um elemento químico com o símbolo Tb e número atômico 65. É um metal de terra rara, branco prateado, maleável, dúctil e macio o suficiente para ser cortado com uma faca. O nono membro da série dos lantanídeos, o térbio é um metal bastante eletropositivo que reage com a água, desenvolvendo gás hidrogênio.",
+                    "66": "O disprósio é um elemento químico com o símbolo Dy e o número atômico 66. É um elemento de terra rara com um brilho prateado metálico. O disprósio nunca é encontrado na natureza como um elemento livre, embora seja encontrado em vários minerais, como o xenotima.",
+                    "67": "O holmio é um elemento químico com o símbolo Ho e número atômico 67. Parte da série dos lantanídeos, o hólmio é um elemento de terra rara. Holmium foi descoberto pelo químico sueco Per Theodor Cleve. O hólmio elementar é um metal branco prateado relativamente macio e maleável. É muito reativo para ser encontrado não combinado na natureza, mas quando isolado, é relativamente estável no ar seco à temperatura ambiente. No entanto, ele reage com a água e corrói prontamente e também queima no ar quando aquecido.",
+                    "68": "Érbio é um elemento químico com o símbolo Er e número atômico 68. Um metal sólido branco prateado quando isolado artificialmente, o érbio natural é sempre encontrado em combinação química com outros elementos.",
+                    "69": "Túlio é um elemento químico com o símbolo Tm e número atômico 69. É o décimo terceiro e o terceiro último elemento da série dos lantanídeos.",
+                    "70": "O itérbio é um elemento químico com o símbolo Yb e o número atômico 70. É o décimo quarto e penúltimo elemento na série dos lantanídeos, que é a base da estabilidade relativa de seu estado de oxidação +2.",
+                    "71": "Lutécio é um elemento químico com o símbolo Lu e número atômico 71. É um metal branco prateado, que resiste à corrosão em ar seco, mas não em ar úmido.",
+                    "72": "O ráfnio é um elemento químico com o símbolo Hf e o número atômico 72. Um metal de transição tetravalente, cinza prateado, lustroso, o háfnio se assemelha quimicamente ao zircônio e é encontrado em muitos minerais de zircônio",
+                    "73": "Tântalo é um elemento químico com o símbolo Ta e número atômico 73. Anteriormente conhecido como tântalo, seu nome vem de Tântalo, um vilão da mitologia grega.",
+                    "74": "Tungstênio, ou volfrâmio, é um elemento químico com o símbolo W e o número atômico 74. O nome tungstênio vem do antigo nome sueco para o mineral tungstato scheelita, derivado da pedra pesada de tungstênio. O tungstênio é um metal raro encontrado naturalmente na Terra quase exclusivamente em compostos químicos.",
+                    "75": "O rênio é um elemento químico com o símbolo Re e número atômico 75. É um metal de transição de terceira linha, branco-prateado, pesado, do grupo 7 da tabela periódica. Com uma concentração média estimada de 1 parte por bilhão (ppb), o rênio é um dos elementos mais raros da crosta. O rênio tem o terceiro ponto de fusão mais alto.",
+                    "76": "Ósmio é um elemento químico com o símbolo Os e número atômico 76. É um metal de transição duro, quebradiço e branco-azulado do grupo da platina, encontrado como oligoelemento em ligas, principalmente em minérios de platina. O ósmio é o elemento mais denso que ocorre naturalmente, com uma densidade de 700422590000000000022,59 g / cm ^ 3.",
+                    "77": "O irídio é um elemento químico com o símbolo Ir e número atômico 77. Um metal de transição branco-prateado muito duro, quebradiço, do grupo da platina, o irídio é o segundo elemento mais denso (depois do ósmio). É também o metal mais resistente à corrosão, mesmo em temperaturas de até 2.000 ° C.",
+                    "78": "A platina é um elemento químico com o símbolo Pt e o número atômico 78. É um metal de transição branco-prateado denso, maleável, dúctil, altamente não reativo, precioso. Seu nome é derivado do termo espanhol platina, que significa pouca prata.",
+                    "79": "O ouro é um elemento químico com o símbolo Au e número atômico 79. Em sua forma mais pura, é um metal brilhante, ligeiramente amarelo-avermelhado, denso, macio, maleável e dúctil. Quimicamente, o ouro é um metal de transição e um elemento do grupo 11.",
+                    "80": "Mercúrio é um elemento químico com o símbolo Hg e número atômico 80. É comumente conhecido como mercúrio e anteriormente era denominado hydrargyrum Um elemento pesado e prateado do bloco d, o mercúrio é o único elemento metálico que é líquido nas condições padrão de temperatura e pressão. O único outro elemento que é líquido à temperatura ambiente.",
+                    "81": "O tálio é um elemento químico com o símbolo Tl e o número atômico 81. Este metal cinza suave pós-transição não é encontrado livre na natureza. Quando isolado, o tálio se assemelha ao estanho, mas descolora quando exposto ao ar.",
+                    "82": "O chumbo é um elemento químico com o símbolo Pb e número atômico 82. É um metal pesado mais denso do que a maioria dos materiais comuns. O chumbo é macio e maleável e tem um ponto de fusão relativamente baixo.",
+                    "83": "O bismuto é um elemento químico com o símbolo Bi e número atômico 83. O bismuto, um metal pós-transição pentavalente e um dos pnictogênios, lembra quimicamente seus homólogos mais leves arsênio e antimônio.",
+                    "84": "O polônio é um elemento químico com o símbolo Po e número atômico 84. Um metal raro e altamente radioativo sem isótopos estáveis, o polônio é quimicamente semelhante ao selênio e ao telúrio, embora seu caráter metálico se assemelhe ao de seus vizinhos horizontais na tabela periódica: tálio, chumbo e bismuto.",
+                    "85": "Astatine é um elemento químico radioativo com o símbolo At e número atômico 85. É o elemento mais raro que ocorre naturalmente na crosta terrestre, ocorrendo apenas como produto da decomposição de vários elementos mais pesados.",
+                    "86": "O radônio é um elemento químico com o símbolo Rn e número atômico 86. É um gás nobre radioativo, incolor, inodoro e insípido.",
+                    "87": "Francium é um elemento químico com o símbolo Fr e número atômico 87. Costumava ser conhecido como eka-césio e actínio K. É o segundo elemento eletronegativo menor, atrás apenas do césio, e é o segundo elemento mais raro de ocorrência natural.",
+                    "88": "O rádio é um elemento químico com o símbolo Ra e número atômico 88. É o sexto elemento do grupo 2 da tabela periódica, também conhecido como metais alcalino-terrosos. O rádio puro é branco prateado, mas reage prontamente com o nitrogênio (em vez do oxigênio) na exposição ao ar, formando uma camada superficial preta de nitreto de rádio (Ra3N2).",
+                    "89": "O actínio é um elemento químico com o símbolo Ac e o número atômico 89. O actínio deu o nome à série dos actinídeos, um grupo de 15 elementos semelhantes entre o actínio e o lawrêncio na tabela periódica.",
+                    "90": "O tório é um elemento químico metálico fracamente radioativo com o símbolo Th e número atômico 90. O metal do tório é prateado e escurece quando exposto ao ar, formando o dióxido; é moderadamente duro, maleável e tem um alto ponto de fusão. O tório é um actinídeo eletropositivo cuja química é dominada pelo estado de oxidação +4; é bastante reativo e pode inflamar no ar quando finamente dividido.",
+                    "91": "O protactínio é um elemento químico com o símbolo Pa e o número atômico 91. É um metal denso, cinza prateado, que reage prontamente com o oxigênio, vapor de água e ácidos inorgânicos.",
+                    "92": "O urânio é um elemento químico com o símbolo U e o número atômico 92. É um metal branco prateado da série dos actinídeos da tabela periódica. O urânio tem o maior peso atômico dos elementos que ocorrem primordialmente. Sua densidade é cerca de 70% superior à do chumbo e ligeiramente inferior à do ouro ou do tungstênio.",
+                    "93": "Neptúnio é um elemento químico com o símbolo Np e número atômico 93. Um metal actinídeo radioativo, o neptúnio é o primeiro elemento transurânico. O metal netúnio é prateado e mancha quando exposto ao ar. É radioativo, venenoso, pirofórico e pode se acumular nos ossos, o que torna perigoso o manuseio do neptúnio.",
+                    "94": "O plutônio é um elemento químico radioativo com o símbolo Pu e número atômico 94. É um metal actinídeo de aparência cinza-prateada que mancha quando exposto ao ar e forma uma cobertura opaca quando oxidado.",
+                    "95": "Amerício é um elemento químico sintético com o símbolo Am e número atômico 95. É um membro transurânico da série dos actinídeos, na tabela periódica localizada sob o elemento lantanídeo európio, e portanto, por analogia, recebeu o nome de Américas.",
+                    "96": "O cúrio é um elemento químico radioativo transurânico com o símbolo Cm e número atômico 96. Este elemento da série dos actinídeos recebeu o nome de Marie e Pierre Curie, ambos conhecidos por suas pesquisas sobre radioatividade.",
+                    "97": "Berquélio é um elemento químico radioativo transurânico com o símbolo Bk e número atômico 97. É um membro da série de elementos actinídeo e transurânio.",
+                    "98": "Californio é um elemento químico radioativo com símbolo Cf e número atômico 98. O elemento foi sintetizado pela primeira vez em 1950 no Laboratório Nacional Lawrence Berkeley, bombardeando cúrio com partículas alfa.",
+                    "99": "Einstênio é um elemento sintético com o símbolo Es e número atômico 99. É o sétimo elemento transurânico e um actinídeo. O Einsteinium foi descoberto como um componente dos destroços da explosão da primeira bomba de hidrogênio em 1952 e recebeu o nome de Albert Einstein.",
+                    "100": "O férmio é um elemento sintético com o símbolo Fm e número atômico 100. É um membro da série dos actinídeos. É o elemento mais pesado que pode ser formado pelo bombardeio de nêutrons de elementos mais leves e, portanto, o último elemento que pode ser preparado em quantidades macroscópicas, embora o férmio metálico puro ainda não tenha sido preparado.",
+                    "101": "Mendelévio é um elemento sintético com símbolo químico Md (anteriormente Mv) e número atômico 101. Elemento transurânico radioativo metálico da série dos actinídeos, é o primeiro elemento que atualmente não pode ser produzido em quantidades macroscópicas por meio do bombardeio de nêutrons de elementos mais leves. É o terceiro ao último actinídeo e o nono elemento transurânico.",
+                    "102": "Nobélio é um elemento químico sintético com o símbolo No e número atômico 102. É nomeado em homenagem a Alfred Nobel, o inventor da dinamite e benfeitor da ciência. Um metal radioativo, é o décimo elemento transurânico e é o penúltimo membro da série dos actinídeos.",
+                    "103": "Laurêncio é um elemento químico sintético com o símbolo Lr e número atômico 103. É nomeado em homenagem a Ernest Lawrence, inventor do ciclotron, um dispositivo que foi usado para descobrir muitos elementos radioativos artificiais.",
+                    "104": "Rutherfórdio é um elemento químico sintético com o símbolo Rf e o número atômico 104, em homenagem ao físico Ernest Rutherford. Como elemento sintético, não é encontrado na natureza e só pode ser criado em laboratório.",
+                    "105": "Dubnium é um elemento químico sintético com símbolo Db e número atômico 105. Dubnium é altamente radioativo: o isótopo conhecido mais estável, dubnium-268, tem meia-vida de pouco mais de um dia. Isso limita muito a extensão da pesquisa sobre o dubnium.",
+                    "106": "Seabórgio é um elemento químico sintético com o símbolo Sg e número atômico 106. Seu nome é uma homenagem ao químico nuclear americano Glenn T. Seaborg.",
+                    "107": "Bohrium é um elemento químico sintético com o símbolo Bh e o número atômico 107. Seu nome vem do físico dinamarquês Niels Bohr.",
+                    "108": "Hassium é um elemento químico sintético com o símbolo Hs e número atômico 108. Seu nome vem do estado alemão de Hesse. É um elemento sintético e radioativo; o isótopo conhecido mais estável, 77Hs, tem meia-vida de aproximadamente 30 segundos.",
+                    "109": "Meitnerium é um elemento químico sintético com o símbolo Mt e número atômico 109. É um elemento sintético extremamente radioativo.",
+                    "110": "Darmstádio é um elemento químico sintético com o símbolo Ds e número atômico 110. É um elemento sintético extremamente radioativo. O isótopo conhecido mais estável, darmstádio-281, tem meia-vida de aproximadamente 10 segundos.",
+                    "111": "O roentgênio é um elemento químico sintético com o símbolo Rg e número atômico 111. É um elemento sintético que pode ser criado em um laboratório, mas não é encontrado na natureza.",
+                    "112": "Copernicio é um elemento químico sintético com símbolo Cn e número atômico 112. É um elemento extremamente radioativo e só pode ser criado em laboratório.",
+                    "113": "Não deu tempo para consultar",
+                    "114": "Não deu tempo para consultar",
+                    "115": "Não deu tempo para consultar",
+                    "116": "Não deu tempo para consultar",
+                    "117": "Não deu tempo para consultar",
+                    "118": "Não deu tempo para consultar",
+                    "57 - 71": "Não há detalhes.",
+                    "88 - 103": "Não há detalhes."
+                }
+                for (const td of document.getElementsByTagName('td')) {
+                    td.setAttribute("onmouseover", "show(this)");
+                    td.setAttribute("onclick", "showDetails(this)")
+                }
+                const p = document.getElementById("selected-el");
+                function show(td) {
+                    p.classList = td.classList
+                    if (!p.classList.length || (p.classList.length == 1 && p.classList[0] == 'red')) {
+                        p.classList.add('s0');
+                    }
+                    p.innerHTML = td.children[0].innerHTML;
+                }
+                function showDetails(td) {
+                    const numeroAtomico = td.children[0].children[0].textContent;
+                    const textoDetalhe = detalhes[numeroAtomico];
+                    window.alert(textoDetalhe);
+                }
+            </script>
+    </body>
+</html>
