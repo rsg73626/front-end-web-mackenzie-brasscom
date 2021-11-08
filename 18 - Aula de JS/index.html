@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Objetos JavaScript</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            article {
+                margin: 5px;
+                padding: 5px;
+                border: 3px solid seagreen;
+            }
+        </style>
+        <script>
+            function mostrarObjeto(objeto) {
+                for (let propriedade in objeto) {
+                    document.write(propriedade + ": " + objeto[propriedade] + ", <br>")
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Objetos JavaScript</h1>
+        <p>Objetos JavaScript também são chamados de JSON.</p>
+        <p>JSON significa JavaScript Object Notation (Notação de Objetos JavaScript, e define como podemos criar objetos em JavaScript).</p>
+        <section>
+            <article>
+                <h2>Objeto simples</h2>
+                <script>
+                    const objetoSimples = {
+                        propriedade1: "texto",
+                        propriedade2: 10,
+                        propriedade3: true,
+                        propriedade4: false,
+                    };
+                    mostrarObjeto(objetoSimples);
+                </script>
+            </article>
+            <article>
+                <h2>Objeto complexo</h2>
+                <script>
+                    const objetoComplexo = {
+                        propriedade1: "texto",
+                        propriedade2: 10,
+                        propriedade3: true,
+                        propriedade4: false,
+                        propriedade5: [1,2,3,4,5],
+                        propriedade6: { prop1: 10, prop2: 20, prop3: 30 }
+                    };
+                    mostrarObjeto(objetoComplexo);
+                </script>
+            </article>
+            <article>
+                <h2>Exemplo família</h2>
+                <script>
+                    function criarPessoa(nome, sobrenome, anoDeNascimento, sexo) {
+                        return {
+                            nomeDaPessoa: nome,
+                            sobrenomeDaPessoa: sobrenome,
+                            anoDeNascimentoDaPessoa: anoDeNascimento,
+                            sexo: sexo
+                        }
+                    }
+                    const maria = criarPessoa("Maria", "Silva", 1990, "Feminino");
+                    mostrarObjeto(maria);
+                    document.write("<br>");
+                    const joao = criarPessoa("João", "Soares", 1990, "Masculino");
+                    mostrarObjeto(joao);
+                    document.write("<br>");
+                    const marcos = criarPessoa("Marcos", "Silva", 2010, "Masculino");
+                    mostrarObjeto(marcos);
+                    document.write("<br>");
+                    const aline = criarPessoa("Aline", "Silva", 2010, "Feminino");
+                    mostrarObjeto(aline);
+                    document.write("<br>");
+
+                    maria.filhos = [marcos, aline];
+                    joao["filhos"] = maria.filhos;
+
+                    mostrarObjeto(maria);
+                    document.write("<br>");
+                    mostrarObjeto(joao);
+                    document.write("<br>");
+
+                    document.write("Filhos da Maria: <br>");
+                    for (let filho of maria.filhos) { 
+                        mostrarObjeto(filho);
+                        document.write("<br>");
+                    }
+
+                    document.write("Filhos do João: <br>");
+                    for (let filho of joao.filhos) { 
+                        mostrarObjeto(filho);
+                        document.write("<br>");
+                    }
+                </script>
+            </article>
+            <article>
+                <h2>Objeto com método</h2>
+                <script>
+                    const pessoa = {
+                        primeiroNome: "Nome",
+                        ultimoNome: "Sobrenome",
+                        nomeCompleto: function() {
+                            return this.primeiroNome + " " + this.ultimoNome;
+                        }
+                    }
+                    mostrarObjeto(pessoa);
+                    document.write(pessoa.nomeCompleto());
+                </script>
+            </article>
+            <article>
+                <h2>Ojeto com método</h2>
+                <script>
+                    const alguem = {
+                        nome: "Maria", 
+                        anoDeNascimento: 2020,
+                        idadeNoAno: function(ano) {
+                            if (ano < this.anoDeNascimento) {
+                                return this.nome + " não tinha nascido ainda em " + ano + ".";
+                            }
+                            const idade = ano - this.anoDeNascimento;
+                            return "A idade de " + this.nome + " em " + ano + " será de " + idade + " ano(s).";
+                        }
+                    }
+                    mostrarObjeto(alguem);
+                    document.write(alguem.idadeNoAno(3000));
+                    // Retorne um texto mais bonitinho ("A idade de João em 2020 será 30 anos.")
+                    // Se o ano passado for menor que a data de nascimento, retorne uma mensagme de erro. 
+                </script>
+            </article>
+            <article> 
+                <h2>Calculadora (exemplo de possível aplicação)</h2>
+                <script>
+                    const calculadora = {
+                        soma: function(a, b) { return a + b },
+                        // - * /
+                    }
+                    calculadora.soma(10, 20)// 30
+                </script>
+            </article>
+            <article>
+                <h2>Exemplo com o this</h2>
+                <script>
+                    function criarCurso(nome, quantidadeAulas, alunos) {
+                        return {
+                            nome: nome,
+                            qtdAulas: quantidadeAulas,
+                            alunos: alunos, // Será um array de alunos
+                            qtdAlunos: function() {
+                                return "Há " + this.alunos.length + " aluno(s) no curso " + this.nome + "."
+                            }
+                        }
+                    }
+                    const alunos = ["Aluno 1", "Aluno 2", "Aluno 3", "Aluno 4", "Aluno 5"];
+                    const curso = criarCurso("Dev web Mack Brasscom", 100, alunos)
+                    document.write(curso.qtdAlunos());
+                </script>
+            </article>
+        </section>
+    </body>
+</html>
