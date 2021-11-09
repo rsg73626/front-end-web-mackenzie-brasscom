@@ -41,6 +41,7 @@
             function adicionarTarefa() {
                 const input = document.getElementById("tarefa");
                 const nomeDaTarefa = input.value;
+                input.value = "";
                 const tarefa = criarTarefa(nomeDaTarefa);
                 tarefas.push(tarefa);
                 atualizarTela()
@@ -54,13 +55,36 @@
                 for (const tarefa of tarefas) {
                     const inputCheckbox = document.createElement("input");
                     inputCheckbox.setAttribute("type", "checkbox");
+                    inputCheckbox.setAttribute("onchange", "atualizarTarefa(this)");
+                    inputCheckbox.setAttribute("id", tarefa.id)
+
+                    if (tarefa.concluido) {
+                        inputCheckbox.setAttribute("checked", "");
+                    }
+
                     const label = document.createElement("label");
                     label.innerHTML = tarefa.nome;
+
                     const br = document.createElement("br");
+
                     formTarefas.appendChild(inputCheckbox);
                     formTarefas.appendChild(label);
                     formTarefas.appendChild(br);
                 }
+            }
+
+            function atualizarTarefa(input) {
+                const id = Number(input.getAttribute("id"));
+                let tarefaParaConcluir;
+                for (let i = 0; i < tarefas.length; i++) {
+                    const tarefaAtual = tarefas[i];
+                    if (tarefaAtual.id == id) {
+                        tarefaParaConcluir = tarefaAtual;
+                        break;
+                    }
+                }
+                console.log(input.checked);
+                tarefaParaConcluir.concluido = input.checked;
             }
         </script>
     </body>
