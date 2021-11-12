@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS 6 (ECMAScript 6)</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            article {
+                margin: 5px;
+                padding: 5px;
+                border: 3px solid seagreen;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Recursos do ECMAScript 6 importantes</h1>
+        <section>
+            <article>
+                <h2>Arrow funcitons</h2>
+
+                <script>
+                    function soma(a, b) { 
+                        return a + b;
+                    }
+
+                    const somaAF = (a, b) => {
+                        return a + b;
+                    }
+
+                    document.write(soma(10, 10) + "<br>");
+                    document.write(somaAF(10, 10) + "<br>")
+
+                    function sub(a, b) {
+                        return a - b;
+                    }
+
+                    const subAF = (a, b) => a - b;
+
+                    document.write(sub(10, 10) + "<br>");
+                    document.write(subAF(10, 10) + "<br>")
+                    document.write((typeof subAF) + "<br>")
+
+                    function calcula(valor1, valor2, operacao) {
+                        return operacao(valor1, valor2)
+                    }
+
+                    document.write(calcula(10, 10, subAF) + "<br>");
+
+                    function pegaOperacao(sinal) {
+                        switch (sinal) {
+                            case "+": return somaAF;
+                            case "-": return subAF;
+                            default: (v1, v2) => "";
+                        }
+                    }
+
+                    const operacao = pegaOperacao("+");
+                    document.write(calcula(10, 10, operacao) + "<br>");
+                </script>
+            </article>
+            <article>
+                <h2>Usando funçaão map de arrays</h2>
+                <script>
+                    const numeros = [1, 2, 3, 4, 5];
+
+                    function numeroParaTexto(numero) {
+                        return "" + numero;
+                    }
+
+                    document.write(numeroParaTexto(100) + ", " + (typeof numeroParaTexto(100)) + "<br>");
+
+                    for (const nmr of numeros) {
+                        document.write(nmr + ", " + (typeof nmr) + "<br>");
+                    }
+
+                    // const textos = numeros.map(numeroParaTexto);
+                    const textos = numeros.map((parametro) => { return parametro + "" });
+
+                    for (const nmr of textos) {
+                        document.write(nmr + ", " + (typeof nmr) + "<br>");
+                    }
+                </script>
+            </article>
+            <article>
+                <h2>Destructuring de objetos</h2>
+                <script>
+                    const pessoa = {
+                        nome: "Maria",
+                        sobrenome: "da Silva",
+                        idade: 40,
+                        endereco: {
+                            cidade: "São Paulo",
+                            estado: "São Paulo",
+                            rua: "Av. Paulista",
+                            bairro: "Bela Vista"
+                        }
+                    }
+
+                    // nome, idade, estado
+                    // const nome = pessoa.nome;
+                    // const idade = pessoa.idade;
+                    // const estado = pessoa.endereco.estado;
+
+                    // usando destructuring
+                    const { nome, idade, endereco: { estado } } = pessoa;
+                    document.write(nome + "<br>");
+                    document.write(idade + "<br>");
+                    document.write(estado + "<br>");
+
+                    function mostraObjeto({ nome, sobrenome, idade }) {
+                        return "Oi, eu sou o(s) " + nome + " " + sobrenome + " e tenho " + idade + " anos.";
+                    }
+
+                    document.write(mostraObjeto(pessoa) + "<br>");
+                </script>
+            </article>
+            <article>
+                <h2>Spread operator (operador de espalhamento)</h2>
+                <script>
+                    const array1 = [1,2,3];
+                    const array2 = [4,5,6];
+                    // [1, 2, 3, 4, 5, 6]
+                    const array3 = [...array1, ...array2];
+                    document.write(array1 + "<br>");
+                    document.write(array2 + "<br>");
+                    document.write(array3 + "<br>");
+
+                    const objeto1 = { a: 1, b: 2, c: 3 };
+                    const objeto2 = { d: 4, e: 5, c: 6 };
+                    const objeto3 = { ...objeto1, ...objeto2 }
+                    console.log(objeto1);
+                    console.log(objeto2);
+                    console.log(objeto3);
+                </script>
+            </article>
+        </section>
+    </body>
+</html>

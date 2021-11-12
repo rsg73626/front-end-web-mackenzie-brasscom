@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Orientação à Objetos (OO)</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            article {
+                margin: 5px;
+                padding: 5px;
+                border: 3px solid seagreen;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JavaScript OO</h1>
+        <section>
+            <article>
+                <h2>Classe simples</h2>
+                <script>
+                    class Pessoa {
+                        constructor(nome, sobrenome, ano) {
+                            this.nome = nome;
+                            this.sobrenome = sobrenome;
+                            this.ano = ano;
+                        }
+
+                        nomeCompleto() {
+                            return this.nome + " " + this.sobrenome;
+                        }
+
+                        apresentarSe() {
+                            return "Oi, eu sou o(a) " + this.nomeCompleto() + " e nasci no ano " + this.ano + ".";
+                        }
+                    }
+
+                    const pessoa = new Pessoa("Renan", "Soares", 1997);
+                    const pessoa2 = new Pessoa("Maria", "Silva", 1990);
+                    const pessoa3 = new Pessoa("João", "Souza", 1995);
+
+                    for (const p of [pessoa, pessoa2, pessoa3]) {
+                        document.write(p.apresentarSe() + "<br>");
+                    }
+                </script>
+            </article>
+            <article>
+                <h2>Herança</h2>
+                <script>
+                    class Professor extends Pessoa {
+                        constructor(nome, sobrenome, ano, universidade, cursos) {
+                            super(nome, sobrenome, ano)
+                            this.universidade = universidade
+                            this.cursos = cursos
+                        }
+
+                        apresentarSe() {
+                            return super.apresentarSe() + " Eu dou aula nos cursos " + this.cursos + ", na universidade " + this.universidade + ".";
+                        }
+                    }
+
+                    const professor = new Professor("Maria", "da Mata", 1990, "Mackenzie", ["Química", "Matemática", "Biologia"]);
+                    console.log(professor);
+                    document.write(professor.apresentarSe());
+                </script>
+            </article>
+            <article>
+                <h2>Getters e Setters</h2>
+                <script>
+                    class Operacao {
+                        constructor(a, b, operacao) {
+                            this.a = a;
+                            this.b = b;
+                            this.operacao = operacao;
+                            this._mensagemDeErro = "Erro padrão.";
+                        }
+
+                        get resultado() {
+                            switch (this.operacao) {
+                                case "+": return this.a + this.b;
+                                case "-": return this.a - this.b;
+                                case "*": return this.a * this.b;
+                                case "/": return this.a / this.b;
+                                default: return this._mensagemDeErro;
+                            }
+                        }
+
+                        get erro() {
+                            return this._mensagemDeErro;
+                        }
+
+                        set erro(valor) {
+                            this._mensagemDeErro = valor;
+                        }
+                    }
+
+                    const soma = new Operacao(10, 10, "**");
+                    document.write(soma.erro);
+                    soma.erro = "Mensagem customizada de erro!";
+                    document.write(soma.resultado);
+                </script>
+            </article>
+            <article>
+                <h2>Funções estáticas de classes</h2>
+                <script>
+                    class Animal {
+                        constructor(especie, qtdPatas, locomocao, alimentacao) {
+                            this.especie = especie
+                            this.qtdPatas = qtdPatas
+                            this.locomocao = locomocao
+                            this.alimentacao = alimentacao
+                        }
+
+                        static apresentarAnimal(animal) {
+                            return "Este animal é da espécie " + animal.especie + ", possui " + animal.qtdPatas + " patas, locomove-se " + animal.locomocao + " e é " + animal.alimentacao + ".";
+                        }
+                    }
+
+                    const leao = new Animal("felino", 4, "andando", "carnivoro");
+
+                    document.write(Animal.apresentarAnimal(leao));
+                </script>
+            </article>
+            <article>
+                <h2>Prática</h2>
+                <script>
+                    class FormaGeometrica {
+                        constructor(lados) {
+                            this.lados = lados;
+                        }
+
+                        get perimetro() {
+                            let soma = 0;
+                            for (const lado of this.lados) { soma += lado; }
+                            return soma
+                        }
+
+                        get nome() {
+                            switch (this.lados.length) {
+                                case 0:
+                                case 1:
+                                case 2:
+                                    return "Erro";
+                                case 3: return "Triângulo";
+                                case 4: return "Quadrado";
+                                case 5: return "Pentagono";
+                                case 6: return "Hexagono";
+                                default: return "Poligono";
+                            }
+                        }
+                    }
+
+                    const triangulo = new FormaGeometrica([10, 10, 10]);
+                    document.write(triangulo.perimetro + "<br>");
+                    document.write(triangulo.nome + "<br>");
+
+                    const quadrado = new FormaGeometrica([10, 10, 10, 10]);
+                    document.write(quadrado.perimetro + "<br>");
+                    document.write(quadrado.nome + "<br>");
+                </script>
+            </article>
+        </section>
+    </body>
+</html>
